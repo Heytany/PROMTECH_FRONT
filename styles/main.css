@@ -1,0 +1,8 @@
+@import url("zeroing_default_styles.css");
+@import url("font_styles.css");
+@import url("color_styles.css");
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */
