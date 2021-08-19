@@ -7,8 +7,26 @@
   color: var(--color-alpha);
 }
 
+.btn-style_alpha {
+  border: solid 2px var(--color-beta);
+  background-color: var(--color-omega);
+}
+.btn-style_alpha span {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--color-beta);
+}
+
 .wrapper {
   max-width: 1208px;
+}
+
+.header-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header .header-background {
@@ -73,15 +91,6 @@
   width: 255px;
   height: 43px;
   margin: 8px 0 0 0;
-  border: solid 2px var(--color-beta);
-  background-color: var(--color-omega);
-}
-.header .wrapper .top-callback__btn span {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: normal;
-  text-align: center;
-  color: var(--color-beta);
 }
 .header .wrapper .top-logo__link {
   display: block;
@@ -89,6 +98,40 @@
 }
 .header .wrapper .top-logo__link img {
   width: 100%;
+}
+.header .wrapper .header-section {
+  margin-top: 51px;
+}
+.header .wrapper .header-section__main-label {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.22;
+  color: var(--color-beta);
+}
+.header .wrapper .header-section__main-label:last-of-type {
+  margin-bottom: 20px;
+}
+.header .wrapper .header-section__second-label {
+  font-size: 18px;
+  line-height: 1.17;
+  color: var(--color-alpha);
+}
+.header .wrapper .header-section__btn {
+  width: 255px;
+  height: 43px;
+  margin: 76px 0 133px 0;
+}
+
+.main-page_header {
+  background-image: url("../img/main/header_background.png");
+  background-color: #cccccc;
+  /* Used if the image is unavailable */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
 }
 
 /*# sourceMappingURL=main.css.map */
