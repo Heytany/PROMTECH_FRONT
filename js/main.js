@@ -40,9 +40,11 @@ $('.catalog-drop-down')
     });
 
 // Наведение на товар
-/*if (window.top < $('.main-page_choice__container').top) {*/
+/*if (window.scrollY > $('.main-page_choice__container').offset().top) {*/
 $('.main-page_choice__item')
     .on('mouseenter', function () {
+        console.log(window.scrollY);
+        console.log($('.main-page_choice__container').offset().top);
         $(this).find('.main-page_choice__name-container').hide();
         $(this).find('.main-page_choice__cost').hide();
         $(this).find('.main-page_choice__type-container').hide();
@@ -126,3 +128,20 @@ $(".modal-inline_no-arrows").fancybox({
 $(".main-page_deal-callback__btn").on("click", function () {
     $(this).parent().parent().find('.submit-message').slideToggle("fast");
 })
+
+$(".popup-callback__button").on("click", function () {
+    $(this).parent().parent().find('.submit-message').slideToggle("fast");
+})
+
+//Переадресация клика попапа
+/*
+$(".popup-callback__label-meta a").on("click", function () {
+    parent.jQuery.fancybox.close();
+    setTimeout(function () {
+        $(".bottom-info__meta-link a").click();
+    }, 1000)
+
+})*/
+
+/*
+НЕЛЬЗЯ ВЫЗЫВАТЬ ПОПАП ИЗ ПОПАПА*/
