@@ -49,7 +49,9 @@
                     </svg>
                     <span class="top-callback__phone"><a href="tel:+7-(962)-716-63-84">+7 (962) 716-63-84</a></span>
                 </div>
-                <button class="top-callback__btn btn-style_alpha"><span>ОБРАТНЫЙ ЗВОНОК</span></button>
+
+                <button type="button" data-src="#00" class="top-callback__btn btn-style_alpha modal-inline_no-arrows">
+                    <span>ОБРАТНЫЙ ЗВОНОК</span></button>
             </div>
             <div class="catalog-drop-down" style="display: none;">
 
@@ -568,6 +570,14 @@
                     </div>
                 </div>
                 <form action="" class="main-page_deal-callback__form">
+                    <div class="submit-message" style="display: none">
+                        <div class="message-container">
+                            <img src="./img/popups/done.png" alt="">
+                            <p class="message-main">Спасибо!</p>
+                            <p class="message-semi"> Ваша заявка принята, мы свяжемся <br>
+                                с Вами в ближайшее время.</p>
+                        </div>
+                    </div>
                     <div class="main-page_deal-callback__item">
                         <p class="main-page_deal-callback__item-description">Ваше Имя*</p>
                         <input type="text" placeholder="Иванов Иван Иванович" name="name">
@@ -593,7 +603,7 @@
                         <textarea placeholder="Комментарий" name="comment"></textarea>
                     </div>
                     <div class="main-page_deal-callback__btn-container">
-                        <button class="main-page_deal-callback__btn btn-style_alpha"><span>ЗАПРОСИТЬ</span></button>
+                        <button type="button" class="main-page_deal-callback__btn btn-style_alpha"><span>ЗАПРОСИТЬ</span></button>
                     </div>
                     <div class="main-page_deal-callback__btn-description">
                         <p> Нажимая на кнопку, вы даете согласие на обработку персональных </p>
@@ -824,13 +834,27 @@
             </p>
         </div>
         <div class="bottom-info__meta-link">
-            <a href="#">Политика конфиденциальности</a>
+            <a href="" data-src="#01" class="modal-inline_no-arrows">Политика конфиденциальности</a>
             <span>ПРОМТЭК. Все права защищены. <br>
             2013 - 2021</span>
             <a href="#">Incomesite.ru</a>
         </div>
     </div>
 </footer>
+
+<div class="popups">
+    <div class="popup-change-size" id="00" style="display: none">
+        <form action="" method="get">
+            LOX
+        </form>
+    </div>
+
+    <div class="popup-change-size" id="01" style="display: none">
+        <form action="" method="get">
+            POLITICS
+        </form>
+    </div>
+</div>
 
 <!-- Jquery -->
 <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>

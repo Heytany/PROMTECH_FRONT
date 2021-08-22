@@ -41,17 +41,88 @@ $('.catalog-drop-down')
 
 // Наведение на товар
 /*if (window.top < $('.main-page_choice__container').top) {*/
-    $('.main-page_choice__item')
-        .on('mouseenter', function () {
-            $(this).find('.main-page_choice__name-container').hide();
-            $(this).find('.main-page_choice__cost').hide();
-            $(this).find('.main-page_choice__type-container').hide();
-            $(this).find('.main-page_choice__options-hover-container').slideToggle("fast");
-        })
-        .on('mouseleave', function () {
-            $(this).find('.main-page_choice__name-container').show();
-            $(this).find('.main-page_choice__cost').show();
-            $(this).find('.main-page_choice__type-container').show();
-            $(this).find('.main-page_choice__options-hover-container').toggle();
-        });
+$('.main-page_choice__item')
+    .on('mouseenter', function () {
+        $(this).find('.main-page_choice__name-container').hide();
+        $(this).find('.main-page_choice__cost').hide();
+        $(this).find('.main-page_choice__type-container').hide();
+        $(this).find('.main-page_choice__options-hover-container').slideToggle("fast");
+    })
+    .on('mouseleave', function () {
+        $(this).find('.main-page_choice__name-container').show();
+        $(this).find('.main-page_choice__cost').show();
+        $(this).find('.main-page_choice__type-container').show();
+        $(this).find('.main-page_choice__options-hover-container').toggle();
+    });
+
 /*}*/
+
+function iOS() {
+    return [
+            'iPad Simulator',
+            'iPhone Simulator',
+            'iPod Simulator',
+            'iPad',
+            'iPhone',
+            'iPod'
+        ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
+
+//Запрет на увеличение сайта кропом пальцев или двойным тапом
+if (iOS() === true) {
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        let now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+
+    document.addEventListener('touchmove', function (event) {
+        if (event.touches.length === 2) {
+            event.preventDefault();
+        }
+
+    }, {passive: false});
+}
+
+//Фэнсибокс без стрелочек
+$(".modal-inline_no-arrows").fancybox({
+    margin: 0,
+    padding: 20,
+    maxWidth: 600,
+    autoScale: true,
+    transitionIn: 'none',
+    transitionOut: 'none',
+    type: 'inline',
+    touch: false,
+    helpers: {
+        overlay: {
+            locked: false
+        }
+    },
+    btnTpl: {
+        arrowLeft:
+            '',
+
+        arrowRight:
+            ''
+    },
+    showNavArrows: false,
+    /*afterLoad: function () {
+        const kol_vo = $('.main-row .pp-orderl-info__row-label span.kol-vo');
+        if ($(window).width() <= '596' && kol_vo.text() === 'Количество') {
+            kol_vo.text('Кол-во');
+        } else {
+            kol_vo.text('Количество');
+        }
+    },*/
+});
+
+//Спасибо на главной странице ПРОСТО ДЛЯ АНИМАЦИИ
+$(".main-page_deal-callback__btn").on("click", function () {
+    $(this).parent().parent().find('.submit-message').slideToggle("fast");
+})

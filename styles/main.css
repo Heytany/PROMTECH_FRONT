@@ -129,6 +129,37 @@
   visibility: hidden;
 }
 
+.submit-message {
+  position: absolute;
+  background-color: #fcfcfc;
+  z-index: 100;
+  top: 0;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit-message .message-container {
+  text-align: center;
+}
+.submit-message .message-container img {
+  max-width: 38px;
+}
+.submit-message .message-container .message-main {
+  margin: 15px 0 20px 0;
+  font-size: 29px;
+  font-weight: bold;
+  line-height: 1.72;
+  color: var(--color-alpha);
+}
+.submit-message .message-container .message-semi {
+  font-size: 16px;
+  line-height: 1.31;
+  color: var(--color-alpha);
+}
+
 .wrapper {
   max-width: 1208px;
 }
@@ -499,6 +530,7 @@
 .main-page_deal-callback__form {
   flex: 42% 0 1;
   margin-top: 75px;
+  position: relative;
 }
 .main-page_deal-callback__form .main-page_deal-callback__item {
   margin-bottom: 20px;

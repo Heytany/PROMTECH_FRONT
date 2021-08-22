@@ -61,7 +61,6 @@
 
 }
 
-
 .btn-style_beta {
   background-color: var(--color-gamma);
   text-align: center;
@@ -73,7 +72,6 @@
     color: var(--color-beta);
   }
 }
-
 
 .video {
   width: 100%;
@@ -147,6 +145,35 @@
         opacity: 0;
         visibility: hidden;
       }
+    }
+  }
+}
+
+.submit-message{
+  position: absolute;
+  background-color: #fcfcfc;
+  z-index: 100;
+  top: 0; bottom: 40px; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .message-container{
+    text-align: center;
+    img{
+      max-width: 38px;
+    }
+    .message-main{
+      margin: 15px 0 20px 0;
+      font-size: 29px;
+      font-weight: bold;
+      line-height: 1.72;
+      color: var(--color-alpha);
+    }
+
+    .message-semi{
+      font-size: 16px;
+      line-height: 1.31;
+      color: var(--color-alpha);
     }
   }
 }
@@ -604,6 +631,7 @@
   &__form {
     flex: 42% 0 1;
     margin-top: 75px;
+    position: relative;
   }
 
   &__form &__item {
