@@ -8,10 +8,20 @@
 }
 
 .btn-style_alpha,
-.btn-style_beta {
+.btn-style_beta,
+.top-menu__link {
   -webkit-transition: all 250ms ease;
   -ms-transition: all 250ms ease;
   transition: all 250ms ease;
+}
+
+.menu-active,
+.top-menu__link:hover {
+  color: var(--color-gamma);
+}
+
+.top-menu__link:active {
+  color: #04ad81;
 }
 
 .btn-style_alpha {
@@ -150,6 +160,7 @@
   justify-content: space-between;
   align-items: center;
   width: 1208px;
+  position: relative;
 }
 .header .wrapper .top-menu__list {
   display: flex;
@@ -220,6 +231,52 @@
   width: 255px;
   height: 43px;
   margin: 76px 0 133px 0;
+}
+.header .catalog-drop-down {
+  z-index: 100;
+  background-color: #e1e1e1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 122px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 35px 30px 0 30px;
+}
+.header .catalog-drop-down__row-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header .catalog-drop-down__item {
+  flex: 30% 0 1;
+}
+.header .catalog-drop-down__item-link_container {
+  display: flex;
+  align-items: center;
+  min-height: 55px;
+  margin-bottom: 22px;
+}
+.header .catalog-drop-down__item-link_container a {
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-alpha);
+  text-decoration: underline;
+}
+.header .catalog-drop-down__all-link_container {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+}
+.header .catalog-drop-down__all-link_container a {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.33;
+  color: var(--color-gamma);
+  margin-right: 15px;
 }
 
 .main-page_header {
@@ -313,6 +370,28 @@
   width: 100%;
   max-height: 270px;
   height: 270px;
+}
+.main-page_capabilities-and-choice .main-page_choice__options-hover-container {
+  margin-top: 44px;
+  flex: 1 0 auto;
+}
+.main-page_capabilities-and-choice .main-page_choice__detail-container {
+  margin-bottom: 35px;
+  text-align: center;
+}
+.main-page_capabilities-and-choice .main-page_choice__detail-container:last-of-type {
+  margin-bottom: 0px;
+}
+.main-page_capabilities-and-choice .main-page_choice__detail-name {
+  font-size: 18px;
+  line-height: 1.11;
+  color: var(--color-alpha);
+}
+.main-page_capabilities-and-choice .main-page_choice__detail-chart {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.58;
+  color: var(--color-alpha);
 }
 .main-page_capabilities-and-choice .main-page_choice__wrapper {
   text-align: center;
