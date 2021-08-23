@@ -794,6 +794,50 @@
   align-items: center;
   margin-bottom: 70px;
 }
+.main .main-page_news .main-page_news__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main-page_news .main-page_news__pagination .main-page_news__next {
+  background-color: var(--color-beta);
+  width: 130px;
+  height: 50px;
+  margin: 0 30px;
+  display: flex;
+  border-radius: 25px;
+  border: 2px solid var(--color-gamma);
+  justify-content: center;
+  align-items: center;
+}
+.main .main-page_news .main-page_news__pagination .main-page_news__next a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .main-page_news .main-page_news__pagination .main-page_news__next a span {
+  font-size: 19px;
+  color: var(--color-alpha);
+}
+.main .main-page_news .main-page_news__pagination .main-page_news__page {
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 47px;
+  width: 47px;
+  border-radius: 50%;
+  background-color: var(--color-beta);
+  text-align: center;
+}
+.main .main-page_news .main-page_news__pagination .main-page_news__page a {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--color-alpha);
+}
+.main .main-page_news .main-page_news__pagination .main-page_news__page.active {
+  background-color: #04ad81;
+}
 .main .main-page_news .main-page_news__main-label {
   margin: 76px 0 90px 0;
   font-size: 60px;
@@ -808,6 +852,7 @@
   align-items: center;
 }
 .main .main-page_news__container {
+  margin-bottom: 4%;
   flex: 31% 0 1;
   overflow: hidden;
   background-color: var(--color-omega);
@@ -825,13 +870,13 @@
   left: 0;
   right: 0;
 }
-.main .main-page_news #news1 {
+.main .main-page_news #news1, .main .main-page_news #news4, .main .main-page_news #news7, .main .main-page_news #news10 {
   background-image: url("../img/main/news1.png");
 }
-.main .main-page_news #news2 {
+.main .main-page_news #news2, .main .main-page_news #news5, .main .main-page_news #news8, .main .main-page_news #news11 {
   background-image: url("../img/main/news2.png");
 }
-.main .main-page_news #news3 {
+.main .main-page_news #news3, .main .main-page_news #news6, .main .main-page_news #news9, .main .main-page_news #news12 {
   background-image: url("../img/main/news3.png");
 }
 .main .main-page_news__container:before {
@@ -925,6 +970,72 @@
 }
 .main .about__img-container img {
   width: 100%;
+}
+.main .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .contacts p {
+  margin: 0 0 25px 0;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.09;
+  color: #000;
+}
+.main .contacts p b {
+  font-weight: 400;
+}
+.main .contacts__btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+.main .contacts__btn-container button {
+  width: 253px;
+  height: 43px;
+}
+.main .contacts__yamap {
+  width: 100%;
+  height: 530px;
+  margin-bottom: 25px;
+}
+.main .contacts__form-label {
+  margin: 0 0 30px 0;
+  font-size: 31px;
+  line-height: 0.77;
+  text-align: center;
+  color: var(--color-alpha);
+}
+.main .contacts .submit-message {
+  background-color: var(--color-beta);
+}
+.main .contacts__callback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .contacts__callback-container .main-page_deal-callback__form {
+  flex: 45% 0 1;
+  margin-top: 0;
+}
+.main .contacts__callback-container .main-page_deal-callback__form .main-page_deal-callback__item {
+  margin-bottom: 50px;
+}
+.main .contacts__callback-container .main-page_deal-callback__form .main-page_deal-callback__item:nth-of-type(6) {
+  margin-bottom: 0;
+}
+.main .contacts__callback-container .main-page_deal-callback__form .main-page_deal-callback__btn-container {
+  justify-content: center;
+}
+.main .contacts__callback-container .main-page_deal-callback__form .main-page_deal-callback__btn-description p {
+  margin: 3px 0 0 5px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: normal;
+  text-align: right;
+  color: var(--color-alpha);
 }
 
 .footer {
