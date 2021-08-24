@@ -1,162 +1,10 @@
 @import url("zeroing_default_styles.css");
 @import url("font_styles.css");
 @import url("color_styles.css");
+@import url("animations_and_assets.css");
 * {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: var(--color-alpha);
-}
-
-.btn-style_alpha,
-.btn-style_beta,
-.top-menu__link {
-  -webkit-transition: all 250ms ease;
-  -ms-transition: all 250ms ease;
-  transition: all 250ms ease;
-}
-
-.menu-active,
-.top-menu__link:hover {
-  color: var(--color-gamma);
-}
-
-.top-menu__link:active {
-  color: #04ad81;
-}
-
-.btn-style_alpha {
-  border: solid 2px var(--color-beta);
-  background-color: var(--color-omega);
-}
-.btn-style_alpha span {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: normal;
-  text-align: center;
-  color: var(--color-beta);
-}
-
-.btn-style_alpha:hover {
-  background-color: #334575;
-}
-
-.btn-style_alpha:active {
-  background-color: #1f2b4a;
-  border: none;
-}
-
-.btn-style_beta:hover {
-  background-color: #05c694;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset;
-}
-
-.btn-style_beta:active {
-  background-color: #04ad81;
-  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
-}
-
-.btn-style_beta {
-  background-color: var(--color-gamma);
-  text-align: center;
-}
-.btn-style_beta span {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 3.03;
-  color: var(--color-beta);
-}
-
-.video {
-  width: 100%;
-  position: relative;
-}
-.video-over {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  display: none;
-}
-.video-play {
-  background: var(--color-gamma);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 145px;
-  height: 145px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 8px #fff;
-  z-index: 1;
-  cursor: pointer;
-  transition: 0.2s ease;
-  transition-property: opacity, visibility;
-}
-.video-play::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 50px;
-  width: 0;
-  height: 0;
-  border: 60px solid transparent;
-  border-top-width: 35px;
-  border-bottom-width: 35px;
-  border-left-color: var(--color-beta);
-  border-right-width: 0;
-  transition: transform 0.2s ease;
-}
-.video-play:hover::before {
-  transform: scale(1.2);
-}
-.video video {
-  width: 100%;
-  /* max-height: 528px;*/
-  display: block;
-}
-.video.video-is-playing .video-over {
-  display: block;
-}
-.video.video-is-playing .video-play {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.submit-message {
-  position: absolute;
-  background-color: #fcfcfc;
-  z-index: 100;
-  top: 0;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.submit-message .message-container {
-  text-align: center;
-}
-.submit-message .message-container img {
-  max-width: 38px;
-}
-.submit-message .message-container .message-main {
-  margin: 15px 0 20px 0;
-  font-size: 29px;
-  font-weight: bold;
-  line-height: 1.72;
-  color: var(--color-alpha);
-}
-.submit-message .message-container .message-semi {
-  font-size: 16px;
-  line-height: 1.31;
   color: var(--color-alpha);
 }
 
@@ -229,40 +77,6 @@
 }
 .popup-politics p {
   font-size: 12px;
-}
-
-.flex-scroll {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
-.flex-scroll {
-  scrollbar-face-color: #FFFFFF;
-  scrollbar-shadow-color: #FFFFFF;
-  scrollbar-highlight-color: #FFFFFF;
-  scrollbar-3dlight-color: #FFFFFF;
-  scrollbar-darkshadow-color: #FFFFFF;
-  scrollbar-track-color: #FFFFFF;
-  scrollbar-arrow-color: #FFFFFF;
-}
-
-.flex-scroll::-webkit-scrollbar {
-  width: 15px;
-}
-
-.flex-scroll::-webkit-scrollbar-button {
-  background: var(--color-psi);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.flex-scroll::-webkit-scrollbar-track-piece {
-  background: #c5c5c5;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.flex-scroll::-webkit-scrollbar-thumb {
-  background: var(--color-gamma);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .wrapper {
@@ -742,7 +556,7 @@
   justify-content: flex-end;
   text-align: right;
 }
-.main .main-page_production__canvas .wrapper.container-right .main .main-page_production__link-container {
+.main .main-page_production__canvas .wrapper.container-right .main-page_production__link-container {
   display: flex;
   justify-content: flex-end;
 }
@@ -1035,6 +849,87 @@
   font-weight: 300;
   letter-spacing: normal;
   text-align: right;
+  color: var(--color-alpha);
+}
+.main .calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .calculator .wrapper {
+  flex-basis: 100%;
+}
+.main .calculator__main-label {
+  margin: 37px 0 45px 0;
+  font-size: 60px;
+  line-height: 1.05;
+  text-align: center;
+  color: var(--color-alpha);
+}
+.main .calculator__semi-label {
+  margin: 0 0 35px 0;
+  font-size: 27px;
+  line-height: 0.89;
+  color: var(--color-alpha);
+}
+.main .calculator__meta-label {
+  margin: 0 0 45px 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 0.89;
+  color: var(--color-alpha);
+}
+.main .calculator__check-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.main .calculator__check-column {
+  margin-right: 70px;
+}
+.main .calculator__check-column:last-of-type {
+  margin-right: 0;
+}
+.main .calculator__check-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  height: 32px;
+}
+.main .calculator__check-item input {
+  margin: 5px 0;
+}
+.main .calculator__check-item label {
+  font-size: 24.5px;
+  line-height: 1.2;
+  color: var(--color-alpha);
+}
+.main .calculator__callback-input_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .calculator__callback-input_container .main-page_deal-callback__item {
+  width: 40%;
+  margin-right: 40px;
+  margin-bottom: 25px;
+}
+.main .calculator__callback-input_container:nth-child(even) {
+  margin-right: 0;
+}
+.main .calculator .main-page_deal-callback__btn {
+  margin-right: 10%;
+}
+.main .calculator .submit-message {
+  bottom: 0;
+}
+.main .calculator .main-page_deal-callback__btn-description {
+  margin-right: 10%;
+}
+.main .calculator .main-page_deal-callback__btn-description p {
   color: var(--color-alpha);
 }
 

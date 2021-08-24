@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Контакты</title>
+    <title>Калькулятор</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
@@ -179,29 +179,68 @@
     </div>
     <div class="header-bread_crumbs">
         <div class="wrapper">
-            <span><a href="./index.html">Главная</a>  /  <a href="./contacts.html">Контакты</a></span>
+            <span><a href="./index.html">Главная</a>  /  <a href="./calculator.html">Калькулятор</a></span>
         </div>
     </div>
 </header>
 
 <main class="main">
-    <section class="contacts">
+    <section class="calculator">
         <div class="wrapper">
-            <h2 class="about__main-label">КОНТАКТЫ</h2>
-            <p><b>тел.:</b> +7 (812) 319-36-13 <br>
-                <b>тел.:</b> +7 (962) 716-63-84</p>
-            <p><b>Email:</b> promtec@inbox.ru</p>
-            <p><b>Адрес офиса:</b> 195279, Санкт - Петербург, Индустриальный проспект, д. 44 корп. 2, литер А, оф.625 А,
-                БЦ "Охта - Хаус"</p>
-            <p><b>Адрес производственной площадки:</b> 196631, Санкт-Петербург, Волхонское шоссе, д. 2а</p>
-            <div class="contacts__btn-container">
-                <button type="button" class="btn-style_beta"><span>СКАЧАТЬ РЕКВИЗИТЫ</span></button>
+            <h2 class="calculator__main-label">Калькулятор</h2>
+            <p class="calculator__semi-label">Калькулятор нагрузки для солнечных электростанций</p>
+            <span class="calculator__meta-label">Выберите потребителей и время их работы</span>
+            <div class="calculator__check-container">
+                <div class="calculator__check-column">
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item1"> <label for="item1">Электролампа</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item2"> <label for="item2">Телевизор</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item3"> <label for="item3">Холодильник</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item4"> <label for="item4">Микроволновка</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item5"> <label for="item5">Газ. котел</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item6"> <label for="item6">Циркул. насос</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item7"> <label for="item7">Компьютер</label>
+                    </div>
+                </div>
+                <div class="calculator__check-column">
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item8"> <label for="item8">Электроплита</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item9"> <label for="item9">Кофеварка</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item10"> <label for="item10">Стиральная машина</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item11"> <label for="item11">Утюг</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item12"> <label for="item12">Пылесос</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item13"> <label for="item13">Другой прибор</label>
+                    </div>
+                    <div class="calculator__check-item">
+                        <input type="checkbox" id="item14"> <label for="item14">Чайник</label>
+                    </div>
+                </div>
+
             </div>
-            <div class="contacts__yamap">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A96a5020c4426279ccc3fb77d5641f872e2ec4900c056fd18b3c7eb698124e980&amp;source=constructor"
-                        width="100%" height="100%" frameborder="0"></iframe>
-            </div>
-            <div class="contacts__callback-container">
+
+            <div class="calculator__callback-container">
                 <form action="" class="main-page_deal-callback__form">
                     <div class="submit-message" style="display: none">
                         <div class="message-container">
@@ -211,29 +250,27 @@
                                 с Вами в ближайшее время.</p>
                         </div>
                     </div>
-                    <h3 class="contacts__form-label">Оставить заявку</h3>
-                    <div class="main-page_deal-callback__item">
-                        <input type="text" placeholder="Иванов Иван Иванович" name="name">
+                    <div class="calculator__callback-input_container">
+                        <div class="main-page_deal-callback__item">
+                            <input type="text" placeholder="Иванов Иван Иванович" name="name">
+                        </div>
+
+                        <div class="main-page_deal-callback__item">
+                            <input type="text" placeholder="mail@yandex.ru" name="email">
+                        </div>
+
+                        <div class="main-page_deal-callback__item">
+                            <input type="text" placeholder="+7 ___-___-__-__" name="phone">
+                        </div>
+
+                        <div class="main-page_deal-callback__item">
+                            <input type="text" placeholder="Ваш регион" name="region">
+                        </div>
                     </div>
 
-                    <div class="main-page_deal-callback__item">
-                        <input type="text" placeholder="mail@yandex.ru" name="email">
-                    </div>
-
-                    <div class="main-page_deal-callback__item">
-                        <input type="text" placeholder="+7 ___-___-__-__" name="phone">
-                    </div>
-
-                    <div class="main-page_deal-callback__item">
-                        <input type="text" placeholder="Ваш регион" name="region">
-                    </div>
-
-                    <div class="main-page_deal-callback__item">
-                        <textarea placeholder="Комментарий" name="comment"></textarea>
-                    </div>
                     <div class="main-page_deal-callback__btn-container">
-                        <button type="button" class="main-page_deal-callback__btn btn-style_alpha">
-                            <span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                        <button type="button" class="main-page_deal-callback__btn btn-style_beta">
+                            <span>ЗАПРОСИТЬ</span></button>
                     </div>
                     <div class="main-page_deal-callback__btn-description">
                         <p> Нажимая на кнопку, вы даете согласие на обработку персональных </p>
@@ -241,6 +278,37 @@
                     </div>
                 </form>
             </div>
+
+            <div class="calculator__callback-container">
+                <form action="" class="main-page_deal-callback__form">
+                    <div class="submit-message" style="display: none">
+                        <div class="message-container">
+                            <img src="./img/popups/done.png" alt="">
+                            <p class="message-main">Спасибо!</p>
+                            <p class="message-semi"> Ваша заявка принята, мы свяжемся <br>
+                                с Вами в ближайшее время.</p>
+                        </div>
+                    </div>
+                    <h3 class="contacts__form-label">Запросить инсоляцию в своём регионе</h3>
+                    <div class="calculator__callback-input_container">
+                        <div class="main-page_deal-callback__item">
+                            <input type="text" placeholder="Ваш регион" name="region">
+                        </div>
+                        <div class="main-page_deal-callback__item">
+                            <input type="text" placeholder="mail@yandex.ru" name="email">
+                        </div>
+                    </div>
+                    <div class="main-page_deal-callback__btn-container">
+                        <button type="button" class="main-page_deal-callback__btn btn-style_beta">
+                            <span>ЗАПРОСИТЬ</span></button>
+                    </div>
+                    <div class="main-page_deal-callback__btn-description">
+                        <p> Нажимая на кнопку, вы даете согласие на обработку персональных </p>
+                        <p> данных и соглашаетесь c политикой конфиденциальности.</p>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </section>
 </main>

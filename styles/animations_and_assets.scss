@@ -1,0 +1,295 @@
+/*
+Анимации и стили кнопок и ссылок
+*/
+
+.btn-style_alpha,
+.btn-style_beta,
+.top-menu__link {
+  -webkit-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.menu-active,
+.top-menu__link:hover {
+  color: var(--color-gamma);
+}
+
+.top-menu__link:active {
+  color: #04ad81;
+}
+
+.btn-style_alpha {
+  border: solid 2px var(--color-beta);
+  background-color: var(--color-omega);
+
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--color-beta);
+  }
+}
+
+.btn-style_alpha:hover {
+  background-color: #334575;
+}
+
+.btn-style_alpha:active {
+  background-color: #1f2b4a;
+  border: none;
+}
+
+.btn-style_beta:hover {
+  background-color: #05c694;
+  box-shadow: 0 0 40px rgba(0, 0, 0, .2) inset;
+}
+
+.btn-style_beta:active {
+  background-color: #04ad81;
+  box-shadow: inset rgba(0, 0, 0, .6) 0 -3px 8px,
+  inset rgba(252, 255, 255, .7) 0 3px 8px,
+  rgba(0, 0, 0, .8) 0 3px 8px -3px;
+
+}
+
+.btn-style_beta {
+  background-color: var(--color-gamma);
+  text-align: center;
+
+  span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 3.03;
+    color: var(--color-beta);
+  }
+}
+
+/*
+Измененное управление видеоплеером
+*/
+
+.video {
+  width: 100%;
+  position: relative;
+
+  &-over {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+  }
+
+  &-play {
+    background: var(--color-gamma);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #fff;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.2s ease;
+    transition-property: opacity, visibility;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 50px;
+      width: 0;
+      height: 0;
+      border: 60px solid transparent;
+      border-top-width: 35px;
+      border-bottom-width: 35px;
+      border-left-color: var(--color-beta);
+      border-right-width: 0;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  video {
+    width: 100%;
+    /* max-height: 528px;*/
+    display: block;
+  }
+
+  &.video-is-playing {
+    .video {
+      &-over {
+        display: block;
+      }
+
+      &-play {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+/*
+Измененный дизайн скролла
+*/
+
+.flex-scroll {
+  scrollbar-face-color: #FFFFFF;
+  scrollbar-shadow-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-3dlight-color: #FFFFFF;
+  scrollbar-darkshadow-color: #FFFFFF;
+  scrollbar-track-color: #FFFFFF;
+  scrollbar-arrow-color: #FFFFFF;
+}
+
+.flex-scroll::-webkit-scrollbar {
+  width: 15px;
+}
+
+.flex-scroll::-webkit-scrollbar-button {
+  background: var(--color-psi);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.flex-scroll::-webkit-scrollbar-track-piece {
+  background: #c5c5c5;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.flex-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-gamma);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.flex-scroll {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/*
+Анимированное сообщение отправки формы
+*/
+
+.submit-message {
+  position: absolute;
+  background-color: #fcfcfc;
+  z-index: 100;
+  top: 0;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .message-container {
+    text-align: center;
+
+    img {
+      max-width: 38px;
+    }
+
+    .message-main {
+      margin: 15px 0 20px 0;
+      font-size: 29px;
+      font-weight: bold;
+      line-height: 1.72;
+      color: var(--color-alpha);
+    }
+
+    .message-semi {
+      font-size: 16px;
+      line-height: 1.31;
+      color: var(--color-alpha);
+    }
+  }
+}
+
+/*
+Собственный чекбокс
+*/
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked),
+{
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label, {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before, {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #dddddd;
+  background-color: var(--color-beta);
+}
+
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:not(:checked) + label:before {
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after, {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+  left: 3px;
+  top: 8px;
+  width: 20px;
+  height: 10px;
+  border-radius: 1px;
+  border-left: 4px solid var(--color-gamma);
+  border-bottom: 4px solid var(--color-gamma);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after, {
+  opacity: 1;
+}
