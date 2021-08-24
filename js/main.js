@@ -133,15 +133,11 @@ $(".popup-callback__button").on("click", function () {
     $(this).parent().parent().find('.submit-message').slideToggle("fast");
 })
 
-//Переадресация клика попапа
-/*
-$(".popup-callback__label-meta a").on("click", function () {
-    parent.jQuery.fancybox.close();
-    setTimeout(function () {
-        $(".bottom-info__meta-link a").click();
-    }, 1000)
 
-})*/
+$('.homeuse__single-slide').slick({
+    arrows:true,
+    dots:false,
+});
 
-/*
-НЕЛЬЗЯ ВЫЗЫВАТЬ ПОПАП ИЗ ПОПАПА*/
+
+
