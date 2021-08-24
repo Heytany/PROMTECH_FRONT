@@ -405,7 +405,9 @@
         background-color: var(--color-beta);
         display: flex;
         flex-direction: column;
-        min-height: 835px;
+        min-height: 850px;
+        max-height: 850px;
+        overflow: hidden;
       }
 
       &__img-container {
@@ -1130,6 +1132,7 @@
 
     .submit-message {
       bottom: 0;
+      background-color: var(--color-beta);
     }
 
     .main-page_deal-callback__btn-description {
@@ -1142,6 +1145,89 @@
     }
   }
 
+  .contacts-form-home {
+    width: 1208px;
+  }
+
+  .homeuse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__main-label {
+      margin: 25px 0 30px 0;
+      font-size: 60px;
+      line-height: 1.05;
+      text-align: center;
+      color: var(--color-alpha);
+    }
+
+    &__semi-label {
+      margin: 30px 0;
+      font-size: 27px;
+      line-height: 1.2;
+      color: var(--color-alpha);
+    }
+
+    span {
+      padding-left: 1.5em;
+      margin: 30px 0;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.2;
+      text-align: left;
+      color: var(--color-alpha);
+    }
+
+    &__middle-label {
+      margin: 55px 0 40px 0;
+      font-size: 31px;
+      line-height: 0.77;
+      text-align: center;
+      color: var(--color-alpha);
+    }
+
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 22%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        padding-left: 0.5em;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1;
+        text-align: left;
+        color: var(--color-alpha);
+      }
+
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+}
+
+.homeuse.homeuse-separator {
+  margin-bottom: 50px;
+}
+
+.main-page_capabilities-and-choice.homeuse-separator {
+  background-image: none;
+  background-color: var(--color-beta);
+
+  .main-page_choice {
+    margin-bottom: 50px;
+  }
 }
 
 .footer {

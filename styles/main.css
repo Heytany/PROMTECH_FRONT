@@ -330,7 +330,9 @@
   background-color: var(--color-beta);
   display: flex;
   flex-direction: column;
-  min-height: 835px;
+  min-height: 850px;
+  max-height: 850px;
+  overflow: hidden;
 }
 .main .main-page_capabilities-and-choice .main-page_choice__img-container {
   margin-top: 80px;
@@ -925,12 +927,85 @@
 }
 .main .calculator .submit-message {
   bottom: 0;
+  background-color: var(--color-beta);
 }
 .main .calculator .main-page_deal-callback__btn-description {
   margin-right: 10%;
 }
 .main .calculator .main-page_deal-callback__btn-description p {
   color: var(--color-alpha);
+}
+.main .contacts-form-home {
+  width: 1208px;
+}
+.main .homeuse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .homeuse__main-label {
+  margin: 25px 0 30px 0;
+  font-size: 60px;
+  line-height: 1.05;
+  text-align: center;
+  color: var(--color-alpha);
+}
+.main .homeuse__semi-label {
+  margin: 30px 0;
+  font-size: 27px;
+  line-height: 1.2;
+  color: var(--color-alpha);
+}
+.main .homeuse span {
+  padding-left: 1.5em;
+  margin: 30px 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--color-alpha);
+}
+.main .homeuse__middle-label {
+  margin: 55px 0 40px 0;
+  font-size: 31px;
+  line-height: 0.77;
+  text-align: center;
+  color: var(--color-alpha);
+}
+.main .homeuse__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.main .homeuse__item {
+  flex-basis: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .homeuse__item span {
+  padding-left: 0.5em;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1;
+  text-align: left;
+  color: var(--color-alpha);
+}
+.main .homeuse__item img {
+  width: 40px;
+}
+
+.homeuse.homeuse-separator {
+  margin-bottom: 50px;
+}
+
+.main-page_capabilities-and-choice.homeuse-separator {
+  background-image: none;
+  background-color: var(--color-beta);
+}
+.main-page_capabilities-and-choice.homeuse-separator .main-page_choice {
+  margin-bottom: 50px;
 }
 
 .footer {
