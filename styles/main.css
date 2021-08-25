@@ -1124,6 +1124,112 @@
   float: left;
 }
 
+.news-item-label {
+  margin: 35px 0;
+  font-size: 36px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--color-alpha);
+}
+
+.news-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-item__main-label {
+  margin: 65px 0;
+  font-size: 60px;
+  line-height: 1.05;
+  text-align: center;
+  color: var(--color-alpha);
+}
+.news-item__semi-label {
+  margin: 35px 0;
+  color: var(--color-alpha);
+  font-size: 27px;
+  line-height: 0.89;
+}
+.news-item__text-label {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 2.15;
+  color: var(--color-alpha);
+}
+.news-item__btn-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.news-item__link-container {
+  position: relative;
+  height: 43px;
+  width: 255px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #e0e0e0;
+  background-color: #fcfcfc;
+}
+.news-item__link-container span {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+  color: var(--color-alpha);
+}
+.news-item__link-container:last-of-type {
+  margin-right: 0;
+}
+.news-item__link {
+  position: absolute;
+  z-index: 90;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.news-item__single-slide {
+  margin: 50px 0 40px 0;
+  position: relative;
+  padding: 0px 60px;
+}
+.news-item__slide {
+  max-width: 550px !important;
+  margin: 0 20px !important;
+}
+.news-item__slide img {
+  margin: 0 auto;
+  width: 100%;
+}
+.news-item .slick-track {
+  margin: auto;
+}
+.news-item__single-slide .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -15px 0 0 0;
+  z-index: 100;
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+}
+.news-item__single-slide .slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/homeuse/ar1.png") 0 0/100% no-repeat;
+}
+.news-item__single-slide .slick-arrow.slick-next {
+  right: 0;
+  background: url("../img/homeuse/ar2.png") 0 0/100% no-repeat;
+}
+
 .footer {
   background-image: url("../img/main/footer_background.png");
   background-color: var(--color-omega);

@@ -135,8 +135,33 @@ $(".popup-callback__button").on("click", function () {
 
 
 $('.homeuse__single-slide').slick({
-    arrows:true,
-    dots:false,
+    arrows: true,
+    dots: false,
+});
+
+$('#news-item__single-slider1').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
 });
 
 
