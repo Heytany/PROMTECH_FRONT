@@ -54,6 +54,9 @@
   text-align: center;
   color: #7b7b7b;
 }
+.popup-callback__label-meta a {
+  text-decoration: underline;
+}
 
 .popup-politics {
   max-width: 800px;
@@ -1438,6 +1441,17 @@
   align-items: center;
   justify-content: center;
   line-height: normal;
+}
+
+.policies {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.policies ol {
+  padding: 0 0 0 15px;
+  font-size: 12px;
 }
 
 .footer {

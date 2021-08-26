@@ -61,6 +61,9 @@
     line-height: 2;
     text-align: center;
     color: #7b7b7b;
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -1751,6 +1754,18 @@
     }
   }
 
+}
+
+.policies {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ol {
+    padding: 0 0 0 15px;
+    font-size: 12px;
+  }
 }
 
 .footer {
