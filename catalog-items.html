@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Новости</title>
+    <title>Гибридные солнечные электространции</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="img/icon/favicon.ico" type="image/x-icon">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="lib/fancybox/css/jquery.fancybox.css">
     <!-- Link slickslider CSS -->
     <link rel="stylesheet" href="lib/slick/slickslider.css">
-    <!-- Link rSlider CSS -->
+    <    <!-- Link rSlider CSS -->
     <link rel="stylesheet" href="lib/rSlider/css/rSlider.min.css"/>
 
     <link rel="stylesheet" href="styles/main.css"/>
@@ -24,7 +24,8 @@
             <nav class="top-menu">
                 <ul class="top-menu__list">
                     <li class="top-menu__item"><a href="./index.html" class="top-menu__link">ГЛАВНАЯ</a></li>
-                    <li class="top-menu__item drop-down"><a href="./catalog.html" class="top-menu__link">КАТАЛОГ</a></li>
+                    <li class="top-menu__item drop-down"><a href="./catalog.html" class="top-menu__link">КАТАЛОГ</a>
+                    </li>
                     <li class="top-menu__item"><a href="./news.html" class="top-menu__link">НОВОСТИ</a></li>
                     <li class="top-menu__item"><a href="./calculator.html" class="top-menu__link">КАЛЬКУЛЯТОР</a></li>
                     <li class="top-menu__item"><a href="./about.html" class="top-menu__link">О КОМПАНИИ</a></li>
@@ -172,8 +173,10 @@
             </div>
             <nav class="top-menu">
                 <ul class="top-menu__list">
-                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ ЭЛЕКТРОСТАНЦИИ</a></li>
-                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ БАТАРЕИ</a></li>
+                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ
+                        ЭЛЕКТРОСТАНЦИИ</a></li>
+                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ
+                        БАТАРЕИ</a></li>
                     <li class="top-menu__item"><a href="./businessuse.html" class="top-menu__link">ДЛЯ БИЗНЕСА</a></li>
                     <li class="top-menu__item"><a href="./homeuse.html" class="top-menu__link">ДЛЯ ДОМА</a></li>
                 </ul>
@@ -182,253 +185,310 @@
     </div>
     <div class="header-bread_crumbs">
         <div class="wrapper">
-            <span><a href="./index.html">Главная</a>  /  <a href="./news.html">Новости</a></span>
+            <span><a href="./index.html">Главная</a>  /  <a href="./about.html">О компании</a></span>
         </div>
     </div>
 </header>
 
 <main class="main">
-    <section class="main-page_news">
-        <h2 class="main-page_news__main-label">НОВОСТИ</h2>
+    <section class="catalog-items">
         <div class="wrapper">
-            <div class="main-page_news__container" id="news1">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
+            <h2 class="catalog-items__main-label">СОЛНЕЧНЫЕ ЭЛЕКТРОСТАНЦИИ</h2>
+            <div class="catalog-items__container">
+                <div class="catalog-items__filter">
+                    <p class="catalog-items__filter-main-label">Выбор по параметрам</p>
+                    <span class="catalog-items__filter-semi-label">Цена</span>
+                    <div class="catalog-items__price-container">
+                        <div class="catalog-items__price-item">
+                            <input type="text">
+                            <p>руб.</p>
+                        </div>
+                        <div class="catalog-items__price-item">
+                            <input type="text">
+                            <p style="text-align: right">руб.</p>
+                        </div>
+                    </div>
+                    <div class="catalog-items__slider-container">
+                        <input type="text" id="catalog-items__slider1" class="catalog-items__slider"/>
+                    </div>
+                    <!--<div class="catalog-items__slider-container_price"><span>2500 руб.</span> <span>41000 руб.</span></div>-->
+                    <span class="catalog-items__filter-semi-label">Тип солнечных элементов</span>
+                    <div class="catalog-items__check-container">
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-items__item1"> <label for="catalog-items__item1">SOLAR
+                            HOME</label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-items__item2"> <label for="catalog-items__item2">БКТП
+                            35кВ</label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-items__item3"> <label for="catalog-items__item3">БКТП до
+                            20кВ</label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-items__item4"> <label for="catalog-items__item4">Распред.
+                            устр-ва ср. напряжения</label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-items__item5"> <label for="catalog-items__item5">ТП SPS с
+                            гибридным накопителем</label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-items__item6"> <label for="catalog-items__item6">Распред.
+                            устр-ва низ. напряжения
+                        </label>
+                        </div>
+                    </div>
+                    <span class="catalog-items__filter-semi-label">Номинальная мощность</span>
+                    <div class="catalog-items__slider-container">
+                        <input type="text" id="catalog-items__slider2" class="catalog-items__slider"/>
+                    </div>
+                    <!-- <div class="catalog-items__slider-container_price"><span>20 Вт.</span> <span>540 Вт.</span></div>-->
+                    <p class="catalog-items__filter-main-label">Сортировать:</p>
+                    <div class="catalog-items__check-container">
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-sort_items__item1"> <label
+                                for="catalog-sort_items__item1">Сначала новинки</label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-sort_items__item2"> <label
+                                for="catalog-sort_items__item2">По алфавиту: от А до Я
+                        </label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-sort_items__item3"> <label
+                                for="catalog-sort_items__item3">По алфавиту: от Я до А
+                        </label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-sort_items__item4"> <label
+                                for="catalog-sort_items__item4">По цене: сначала дешевые
+                        </label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-sort_items__item5"> <label
+                                for="catalog-sort_items__item5">По цене: сначала дорогие
+                        </label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-sort_items__item6"> <label
+                                for="catalog-sort_items__item6">По популярности
+                        </label>
+                        </div>
+                        <div class="catalog-items__check-item">
+                            <input type="checkbox" id="catalog-sort_items__item7"> <label
+                                for="catalog-sort_items__item7">По акциям
+                        </label>
+                        </div>
+                    </div>
                 </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
+                <div class="catalog-items__choice-container">
+                    <div class="catalog-items__choice-row">
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/1.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>Трансформаторные
+                                подстанции
+                                SPS с гибридным
+                                 накопителем
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 21.000 <i>руб.</i> <span>25.000<i>руб.</i></span>
+                                </p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/2.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>Блочно - модульные
+                                трансформаторные
+                                подстанции
+                                типа "MRw-b" 35 кВ
+                                в бетонном корпусе
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 240.000 <i>руб.</i></p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/3.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>Блочно - модульные
+                                трансформаторные
+                                подстанции
+                                типа "MRw-b" 35 кВ
+                                в металлическом корпусе
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 325.000 <i>руб.</i></p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/4.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>Блочно - модульные
+                                трансформаторные
+                                подстанции
+                                в бетонном корпусе
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 140.000 <i>руб.</i>
+                                </p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/5.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>Цифровые подстанции до 20 кВ
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 75.000 <i>руб.</i>
+                                </p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/6.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>Двухэтажные блочные
+                                комплектные
+                                подстанции
+                                2BOX 6(10,20) кВ
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 410.000 <i>руб.</i>
+                                </p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/7.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>РУНН типа
+                                "RN-W" до 1600 А
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 60.000 <i>руб.</i>
+                                </p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/8.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>РУНН типа
+                                "INSTAL-BLOK"
+                                (шкафы автоматизации)
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 65.000 <i>руб.</i>
+                                </p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+                        <div class="catalog-items__choice-item">
+                            <div class="catalog-items__choice-wrapper">
+                                <div class="catalog-items__choice-img-container">
+                                    <img src="./img/catalog-items/9.png" alt="Изображение товара не найдено">
+                                </div>
+
+                                <div class="catalog-items__choice-name-container">
+                                <span>Конденсаторные
+                                установки типа
+                                "BK" до 1000 кВар
+                                </span>
+                                </div>
+
+
+                                <p class="catalog-items__choice-cost"> 50.000 <i>руб.</i>
+                                </p>
+                            </div>
+                            <div class="catalog-items__choice-link-container">
+                                <button class="btn-style_beta"><span>ОСТАВИТЬ ЗАЯВКУ</span></button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="catalog-items__choice_more-container">
+                        <button class="btn-style_beta"><span>ПОКАЗАТЬ ЕЩЕ</span></button>
+                    </div>
                 </div>
-            </div>
-            <div class="main-page_news__container" id="news2">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-            <div class="main-page_news__container" id="news3">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
+
             </div>
 
-            <div class="main-page_news__container" id="news4">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-            <div class="main-page_news__container" id="news5">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-            <div class="main-page_news__container" id="news6">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-
-            <div class="main-page_news__container" id="news7">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-            <div class="main-page_news__container" id="news8">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-            <div class="main-page_news__container" id="news9">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-
-            <div class="main-page_news__container" id="news10">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-            <div class="main-page_news__container" id="news11">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
-            <div class="main-page_news__container" id="news12">
-                <a href="./news-item.html" class="main-page_news__link_news"></a>
-                <div class="main-page_news__label-container">
-                    <span>
-                        Солнечный электомобиль
-                        Infinite Mobility
-                        попытается побить
-                        мировой рекорд, преодолев
-                        путь в 50 000 км
-                    </span>
-                </div>
-                <div class="main-page_news__description-container">
-                    <span>27.05.2021</span>
-                    <img src="./img/main/logo_news.png" alt="">
-                </div>
-            </div>
         </div>
-        <div class="wrapper">
-            <div class="main-page_news__pagination">
-                <button class="main-page_news__next">
-                    <a href="">
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="25px" height="17px">
-                            <image x="0px" y="0px" width="25px" height="17px"
-                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAQAAACRmLYJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBcOBRLzs6xxAAABdUlEQVQoz2WSy2pTARRF183NA7S1CXVQqEEHScCBSBIT6Gf4Bwoqkqk/0LETh+IfqCPbRkQHbUnrY2x8xJo6a5pUCooRbJAuB5drkvac4WKdDYcdyKlZ4iYZnrCNJzfvy4++17deT56wLvL0S30XuVKmMg3zPP5c75LgDHxnMHlw0XcdV226rn0bXh6jC251XLPphu7bcE7G1puOK5F14F3PSQwnrZ4NZyMlQq0oa0N73nIujsK8rzuuuua67nk7tiL4KrJa2ouzxvDvM5u+0ENveHb6Wwn+hICQpsDs9LvC5YVSbScI2E0X6kiHX5Nwm1ymtg98SxYqBLT5/Z+KMz70eMWmz/XI+y7GmeEyjGiRzdT6BHTDYpkUbYbRWYARrez5dLVPwNdU6RoJPjCMIYzYys1nqn1CdsJSmSRthjGEIzazC+nygIBuqlhBfowhjNjMzWeqAwK6yeJV9qab8JN7lwzufOIYEoSnCzbjAw889JFL/wAPqAyp9SzZ9wAAAABJRU5ErkJggg=="/>
-                        </svg>
-                        <span>Назад</span>
-                    </a>
-                </button>
-                <div class="main-page_news__page active">
-                    <a href="#">1</a>
-                </div>
-                <div class="main-page_news__page">
-                    <a href="#">2</a>
-                </div>
-                <div class="main-page_news__page">
-                    <a href="#">3</a>
-                </div>
-                <div class="main-page_news__page">
-                    <a href="#">4</a>
-                </div>
-                <div class="main-page_news__page">
-                    <a href="#">5</a>
-                </div>
-                <button class="main-page_news__next">
-                    <a href="#">
-                        <span>Вперед</span>
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="25px" height="17px">
-                            <image x="0px" y="0px" width="25px" height="17px"
-                                   xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAQAAACRmLYJAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflCBcOBSOibaxLAAABX0lEQVQoz12SzS4DYRiFn5lpJdpoiQUbG4lJLKuo2ohLcAESxM/Cnm0TO7EUGzeBDis/vQGqC6I/qy60gppGd6LHYkw60+8sn5zzvXnPayjBKsu8cMIr/U8ren+QfnSoiAgLHTwrryvVpWMNhKHJ2/QvdClS3+UII5hq5b7BTlUskwbxTGKEG7o9+EGVqDH/iUmTwUwyxjXyIbR4Go3YqYpl0CS22HNbOYA2ZaL2XMUwaRDLJP7dHoQvnsFOl333MNd0fei5TXuuYho0GVxIDnHbg+BSJmqnahY0iGcTCkJwuSc+NVO1DFwmx8y+bY4zgQkQgU54m2mdl+TIUUFqaS2IUjorKS9Hd9KXNkTQdVlSXnkVJFdbXiueMnJKuvBcLa37lXmBV0UfdbTZ6xPNyvH+upHa2g6WndbZoz9GR7vhS9iv+YFt7YQvIYLVxSLOkssep/0HllVBbdX8CYP6A2nHC4MiyvTsAAAAAElFTkSuQmCC"/>
-                        </svg>
-                    </a>
-                </button>
-            </div>
         </div>
     </section>
 </main>

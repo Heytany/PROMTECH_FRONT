@@ -267,4 +267,39 @@ input[type=checkbox]:checked + label:after {
   opacity: 1;
 }
 
+/*
+Стили на input range
+*/
+.rs-container .rs-scale span::before {
+  display: none !important;
+}
+
+.rs-pointer {
+  width: 20px !important;
+  border-radius: 50% !important;
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white !important;
+}
+
+.rs-pointer::after {
+  display: none;
+}
+
+.rs-container {
+  width: 105% !important;
+}
+
+.rs-container .rs-selected {
+  border: none !important;
+  background-image: linear-gradient(to right, #a0e99a, #caf881) !important;
+}
+
+.rs-pointer::before {
+  height: 10px !important;
+  width: 10px !important;
+  top: 4px !important;
+  left: 4px !important;
+  border-radius: 50% !important;
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white !important;
+}
+
 /*# sourceMappingURL=animations_and_assets.css.map */

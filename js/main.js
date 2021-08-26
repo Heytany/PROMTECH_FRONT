@@ -164,5 +164,32 @@ $('#news-item__single-slider1').slick({
         }]
 });
 
+(function () {
+    var init = function () {
+
+        var sliderPrice = new rSlider({
+            target: '#catalog-items__slider1',
+            range: true,
+            tooltip: false,
+            values: {min: 2500, max: 41000},
+            set: [3500, 31000],
+            step: 500,
+            labels: false,
+            scale: true,
+        });
+
+        var sliderPower = new rSlider({
+            target: '#catalog-items__slider2',
+            range: true,
+            tooltip: false,
+            values: {min: 20, max: 540},
+            set: [11, 222],
+            step: 20,
+            labels: false,
+            scale: true,
+        });
+    };
+    window.onload = init;
+})();
 
 
