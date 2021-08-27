@@ -39,25 +39,6 @@ $('.catalog-drop-down')
         }, 300)
     });
 
-// Наведение на товар
-/*if (window.scrollY > $('.main-page_choice__container').offset().top) {*/
-$('.main-page_choice__item')
-    .on('mouseenter', function () {
-        console.log(window.scrollY);
-        console.log($('.main-page_choice__container').offset().top);
-        $(this).find('.main-page_choice__name-container').hide();
-        $(this).find('.main-page_choice__cost').hide();
-        $(this).find('.main-page_choice__type-container').hide();
-        $(this).find('.main-page_choice__options-hover-container').slideToggle("fast");
-    })
-    .on('mouseleave', function () {
-        $(this).find('.main-page_choice__name-container').show();
-        $(this).find('.main-page_choice__cost').show();
-        $(this).find('.main-page_choice__type-container').show();
-        $(this).find('.main-page_choice__options-hover-container').toggle();
-    });
-
-/*}*/
 
 function iOS() {
     return [
@@ -114,14 +95,6 @@ $(".modal-inline_no-arrows").fancybox({
             ''
     },
     showNavArrows: false,
-    /*afterLoad: function () {
-        const kol_vo = $('.main-row .pp-orderl-info__row-label span.kol-vo');
-        if ($(window).width() <= '596' && kol_vo.text() === 'Количество') {
-            kol_vo.text('Кол-во');
-        } else {
-            kol_vo.text('Количество');
-        }
-    },*/
 });
 
 //Спасибо на главной странице ПРОСТО ДЛЯ АНИМАЦИИ
@@ -232,4 +205,73 @@ $('.catalog-items__choice-wrapper')
 
 /*}*/
 
+// Where el is the DOM element you'd like to test for visibility
+function isHidden(el) {
+    var style = window.getComputedStyle(el);
+    return (style.display === 'none')
+}
+
+let posTop = 0
+$(window).scroll(function () {
+    posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    let hiddenHeader = isHidden($('.header-under_menu')[0]);
+    //console.log(hiddenHeader)
+
+    //let elementExists = $('.header.main-page_header')[0]; - если для других страниц тоже понадобится плавающее меню
+
+    if (((posTop + 25) > $('.header.main-page_header').height()) && (hiddenHeader == false)) {
+        //$('.header.main-page_header').css("height",this.height());
+        $('.header.main-page_header').css("background-color", "none");
+        $('.header.main-page_header').backgroundImage = "none";
+        $('.header-under_menu').hide();
+        $('.header-separator').hide();
+        $('.header-background').css("position", "fixed").css("background-color", "#e1e1e1");
+        //$(window).scrollTop(200);
+    }
+
+    //console.log(posTop);
+    //console.log(isHidden($('.header-separator')[0]));
+    if ((hiddenHeader == true) && (posTop + 25) < 150) {
+        $('.header.main-page_header').css("background-color", "var(--color-omega)").css("z-index", "200");
+        $('.header.main-page_header').backgroundImage = "url('../img/main/header_background.png')";
+        $('.header-under_menu').show();
+        $('.header-separator').show();
+        $('.header-background').css("position", "unset").css("background-color", "rgba(128, 128, 128, 0.28)");
+    }
+
+
+    console.log(posTop, " TOP");
+
+});
+
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+}
+
+
+// Наведение на товар
+let offsetItemBuy = offset($('.main-page_choice__container')[0]);
+
+$('.main-page_choice__item')
+    .on('mouseenter', function () {
+        if (posTop < offsetItemBuy.top) {
+            $(this).find('.main-page_choice__name-container').hide();
+            $(this).find('.main-page_choice__cost').hide();
+            $(this).find('.main-page_choice__type-container').hide();
+            $(this).find('.main-page_choice__options-hover-container').slideToggle("fast");
+        }
+
+    })
+    .on('mouseleave', function () {
+        if (posTop < offsetItemBuy.top) {
+            $(this).find('.main-page_choice__name-container').show();
+            $(this).find('.main-page_choice__cost').show();
+            $(this).find('.main-page_choice__type-container').show();
+            $(this).find('.main-page_choice__options-hover-container').toggle();
+        }
+    });
+/*}*/
 
