@@ -61,6 +61,7 @@
     line-height: 2;
     text-align: center;
     color: #7b7b7b;
+
     a {
       text-decoration: underline;
     }
@@ -1631,6 +1632,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
   }
 
@@ -1754,6 +1756,237 @@
     }
   }
 
+  &__choice-hover {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 25%;
+
+    a {
+      display: flex;
+      flex-basis: 80%;
+      height: 30px;
+      z-index: 90;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        line-height: normal;
+      }
+    }
+  }
+
+}
+
+.catalog-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__slider-container {
+    flex: 42% 0 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+  }
+
+  &__slider-previev {
+    flex: 70% 0 1;
+    height: 500px;
+    background-color: rebeccapurple;
+  }
+
+  &__single-slide {
+
+    margin: 50px 0 40px 0;
+    position: relative;
+    padding: 20px 0;
+  }
+
+  &__slide {
+    max-width: 125px !important;
+    min-width: 50px;
+    margin: 10px 5px;
+
+  }
+
+  &__slide.slick-slide {
+    -webkit-box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
+    box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
+  }
+
+  &__slide.slick-slide:before {
+    content: "";
+    padding-top: 100%;
+    float: left;
+  }
+
+  &__slide img {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 125px;
+  }
+
+  .slick-track {
+    display: block;
+    margin: auto 0;
+  }
+
+  &__single-slide .slick-arrow {
+    position: absolute;
+    left: 40%;
+    margin: -15px 0 0 0;
+    z-index: 100;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__single-slide .slick-arrow.slick-prev {
+    top: 0;
+    background: url('../img/catalog-detail/arup.png') 0 0 / 100% no-repeat;
+  }
+
+  &__single-slide .slick-arrow.slick-next {
+    bottom: 0;
+    background: url('../img/catalog-detail/ardown.png') 0 0 / 100% no-repeat;
+  }
+
+  &__description-container {
+    flex: 55% 0 1;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 40px;
+      line-height: 1.03;
+      text-align: left;
+    }
+
+    h3 {
+      height: 24px;
+      margin: 25px 0 25px 0;
+      font-size: 26px;
+      line-height: 1.23;
+    }
+
+  }
+
+  &__description {
+    flex: 1 0 auto;
+
+    p {
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: 300;
+
+      i {
+        font-size: 12px;
+        font-style: normal;
+      }
+    }
+  }
+
+  &__cost-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+
+      font-size: 30.5px;
+      font-weight: bold;
+      line-height: 0.75;
+      text-align: center;
+      color: var(--color-gamma);
+      margin-bottom: 10px;
+      flex: 0 0 auto;
+
+      i {
+        font-style: normal;
+        font-size: 24.5px;
+        font-weight: 300;
+        color: var(--color-alpha);
+      }
+
+      span {
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: var(--color-alpha);
+
+        i {
+          font-style: normal;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+
+      span::after {
+        content: "";
+        position: absolute;
+        background: red;
+        left: 0;
+        transform: rotate(160deg);
+        bottom: 12px;
+        width: 74%;
+        height: 2px;
+      }
+
+
+    }
+
+    button {
+      width: 201px;
+      height: 35px;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+      }
+
+    }
+  }
+
+  &__options-container {
+    h4 {
+      margin: 0 0 30px 0;
+      font-size: 27px;
+      line-height: 0.89;
+    }
+    p{
+      text-indent: 1.5em;
+      margin: 30px;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1.2;
+    }
+    ol{
+      margin: 30px;
+      padding-left: 3.5em;
+      li{
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+    }
+  }
+
 }
 
 .policies {
@@ -1764,7 +1997,6 @@
 
   ol {
     padding: 0 0 0 15px;
-    font-size: 12px;
   }
 }
 

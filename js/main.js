@@ -135,13 +135,15 @@ $(".popup-callback__button").on("click", function () {
 
 
 $('.homeuse__single-slide').slick({
+    infinite: true,
     arrows: true,
     dots: false,
+    speed: 300,
 });
 
 $('#news-item__single-slider1').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -150,6 +152,32 @@ $('#news-item__single-slider1').slick({
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+});
+
+$('#catalog-detail__single-slider1').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true
@@ -191,5 +219,17 @@ $('#news-item__single-slider1').slick({
     };
     window.onload = init;
 })();
+
+// Наведение на товар в каталоге
+
+$('.catalog-items__choice-wrapper')
+    .on('mouseenter', function () {
+        $(this).find('.catalog-items__choice-hover').toggle();
+    })
+    .on('mouseleave', function () {
+        $(this).find('.catalog-items__choice-hover').toggle();
+    });
+
+/*}*/
 
 

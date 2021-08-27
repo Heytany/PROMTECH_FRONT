@@ -1339,6 +1339,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .catalog-items__choice-img-container {
   padding: 15px 5px;
@@ -1442,6 +1443,197 @@
   justify-content: center;
   line-height: normal;
 }
+.catalog-items__choice-hover {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 25%;
+}
+.catalog-items__choice-hover a {
+  display: flex;
+  flex-basis: 80%;
+  height: 30px;
+  z-index: 90;
+  justify-content: center;
+  align-items: center;
+}
+.catalog-items__choice-hover a span {
+  line-height: normal;
+}
+
+.catalog-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catalog-detail__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catalog-detail__slider-container {
+  flex: 42% 0 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+}
+.catalog-detail__slider-previev {
+  flex: 70% 0 1;
+  height: 500px;
+  background-color: rebeccapurple;
+}
+.catalog-detail__single-slide {
+  margin: 50px 0 40px 0;
+  position: relative;
+  padding: 20px 0;
+}
+.catalog-detail__slide {
+  max-width: 125px !important;
+  min-width: 50px;
+  margin: 10px 5px;
+}
+.catalog-detail__slide.slick-slide {
+  -webkit-box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
+  box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
+}
+.catalog-detail__slide.slick-slide:before {
+  content: "";
+  padding-top: 100%;
+  float: left;
+}
+.catalog-detail__slide img {
+  margin: 0 auto;
+  width: 100%;
+  max-height: 125px;
+}
+.catalog-detail .slick-track {
+  display: block;
+  margin: auto 0;
+}
+.catalog-detail__single-slide .slick-arrow {
+  position: absolute;
+  left: 40%;
+  margin: -15px 0 0 0;
+  z-index: 100;
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+}
+.catalog-detail__single-slide .slick-arrow.slick-prev {
+  top: 0;
+  background: url("../img/catalog-detail/arup.png") 0 0/100% no-repeat;
+}
+.catalog-detail__single-slide .slick-arrow.slick-next {
+  bottom: 0;
+  background: url("../img/catalog-detail/ardown.png") 0 0/100% no-repeat;
+}
+.catalog-detail__description-container {
+  flex: 55% 0 1;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.catalog-detail__description-container h2 {
+  font-size: 40px;
+  line-height: 1.03;
+  text-align: left;
+}
+.catalog-detail__description-container h3 {
+  height: 24px;
+  margin: 25px 0 25px 0;
+  font-size: 26px;
+  line-height: 1.23;
+}
+.catalog-detail__description {
+  flex: 1 0 auto;
+}
+.catalog-detail__description p {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 300;
+}
+.catalog-detail__description p i {
+  font-size: 12px;
+  font-style: normal;
+}
+.catalog-detail__cost-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog-detail__cost-container p {
+  font-size: 30.5px;
+  font-weight: bold;
+  line-height: 0.75;
+  text-align: center;
+  color: var(--color-gamma);
+  margin-bottom: 10px;
+  flex: 0 0 auto;
+}
+.catalog-detail__cost-container p i {
+  font-style: normal;
+  font-size: 24.5px;
+  font-weight: 300;
+  color: var(--color-alpha);
+}
+.catalog-detail__cost-container p span {
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-alpha);
+}
+.catalog-detail__cost-container p span i {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 300;
+}
+.catalog-detail__cost-container p span::after {
+  content: "";
+  position: absolute;
+  background: red;
+  left: 0;
+  transform: rotate(160deg);
+  bottom: 12px;
+  width: 74%;
+  height: 2px;
+}
+.catalog-detail__cost-container button {
+  width: 201px;
+  height: 35px;
+}
+.catalog-detail__cost-container button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+}
+.catalog-detail__options-container h4 {
+  margin: 0 0 30px 0;
+  font-size: 27px;
+  line-height: 0.89;
+}
+.catalog-detail__options-container p {
+  text-indent: 1.5em;
+  margin: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.catalog-detail__options-container ol {
+  margin: 30px;
+  padding-left: 3.5em;
+}
+.catalog-detail__options-container ol li {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
+}
 
 .policies {
   margin: 40px 0;
@@ -1451,7 +1643,6 @@
 }
 .policies ol {
   padding: 0 0 0 15px;
-  font-size: 12px;
 }
 
 .footer {

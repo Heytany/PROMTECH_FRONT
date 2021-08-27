@@ -61,11 +61,11 @@
                 <div class="catalog-drop-down__row-item">
                     <div class="catalog-drop-down__item">
                         <div class="catalog-drop-down__item-link_container">
-                            <a href="#">Трансформаторная подстанция
+                            <a href="./catalog-items.html">Трансформаторная подстанция
                                 SPS с гибридным накопителем</a>
                         </div>
                         <div class="catalog-drop-down__all-link_container">
-                            <a href="#">Все товары</a>
+                            <a href="./catalog-items.html">Все товары</a>
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -78,11 +78,11 @@
 
                     <div class="catalog-drop-down__item">
                         <div class="catalog-drop-down__item-link_container">
-                            <a href="#">Распределительные устройства
+                            <a href="./catalog-items.html">Распределительные устройства
                                 среднего напряжения</a>
                         </div>
                         <div class="catalog-drop-down__all-link_container">
-                            <a href="#">Все товары</a>
+                            <a href="./catalog-items.html">Все товары</a>
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -95,11 +95,11 @@
 
                     <div class="catalog-drop-down__item">
                         <div class="catalog-drop-down__item-link_container">
-                            <a href="#">Распределительные устройства
+                            <a href="./catalog-items.html">Распределительные устройства
                                 низкого напряжения</a>
                         </div>
                         <div class="catalog-drop-down__all-link_container">
-                            <a href="#">Все товары</a>
+                            <a href="./catalog-items.html">Все товары</a>
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -113,11 +113,11 @@
                 <div class="catalog-drop-down__row-item">
                     <div class="catalog-drop-down__item">
                         <div class="catalog-drop-down__item-link_container">
-                            <a href="#">Гибридные солнечные
+                            <a href="./catalog-items.html">Гибридные солнечные
                                 электростанции</a>
                         </div>
                         <div class="catalog-drop-down__all-link_container">
-                            <a href="#">Все товары</a>
+                            <a href="./catalog-items.html">Все товары</a>
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -130,10 +130,10 @@
 
                     <div class="catalog-drop-down__item">
                         <div class="catalog-drop-down__item-link_container">
-                            <a href="#">БКТП 35 кВ</a>
+                            <a href="./catalog-items.html">БКТП 35 кВ</a>
                         </div>
                         <div class="catalog-drop-down__all-link_container">
-                            <a href="#">Все товары</a>
+                            <a href="./catalog-items.html">Все товары</a>
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -146,10 +146,10 @@
 
                     <div class="catalog-drop-down__item">
                         <div class="catalog-drop-down__item-link_container">
-                            <a href="#">БКТП до 20 кВ</a>
+                            <a href="./catalog-items.html">БКТП до 20 кВ</a>
                         </div>
                         <div class="catalog-drop-down__all-link_container">
-                            <a href="#">Все товары</a>
+                            <a href="./catalog-items.html">Все товары</a>
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -191,7 +191,7 @@
                     мониторинга новых технических решений, адаптируем их к ожиданиям и потребностям <br>
                     Партнеров.</span>
                 <div class="header-section__container">
-                    <button class="header-section__btn btn-style_alpha">
+                    <button type="button" data-src="#02" class="header-section__btn btn-style_alpha modal-inline_no-arrows">
                         <span>ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</span>
                     </button>
                 </div>
@@ -943,6 +943,32 @@
                     изменения в Политике конфиденциальности.
                 </p>
             </div>
+        </form>
+    </div>
+
+    <div class="popup-change-size" id="02" style="display: none">
+        <form class="popup-callback" action="get" method="get">
+            <div class="submit-message" style="display: none">
+                <div class="message-container">
+                    <img src="./img/popups/done.png" alt="">
+                    <p class="message-main">Спасибо!</p>
+                    <p class="message-semi"> Ваша заявка принята, мы свяжемся <br>
+                        с Вами в ближайшее время.</p>
+                </div>
+            </div>
+            <h2 class="popup-callback__main-label">Заполните форму:</h2>
+            <div class="popup-callback__input-container">
+                <p>Ваше Имя*</p>
+                <input placeholder="Иванов Иван Иванович" type="text" name="name">
+            </div>
+            <div class="popup-callback__input-container">
+                <p>Ваш Телефон*</p>
+                <input placeholder="+7 ___ ___ __  __" type="text" name="phone">
+            </div>
+            <button type="button" class="popup-callback__button btn-style_beta"><span>ОТПРАВИТЬ</span></button>
+            <p class="popup-callback__label-meta">ННажимая кнопку «Отправить» вы соглашаетесь с
+                <a href="./policies.html" target="_blank"> Политикой
+                    конфеденциальности</a></p>
         </form>
     </div>
 </div>
