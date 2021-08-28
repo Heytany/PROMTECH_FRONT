@@ -212,6 +212,7 @@ function isHidden(el) {
 }
 
 let posTop = 0
+let elementExists = $('.header.main-page_header')[0];
 $(window).scroll(function () {
     posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     let hiddenHeader = isHidden($('.header-under_menu')[0]);
@@ -240,7 +241,7 @@ $(window).scroll(function () {
     }
 
 
-    console.log(posTop, " TOP");
+    //console.log(posTop, " TOP");
 
 });
 
@@ -254,10 +255,12 @@ function offset(el) {
 
 // Наведение на товар
 let offsetItemBuy = offset($('.main-page_choice__container')[0]);
-
+let itemHeight = $('.main-page_choice__container').height() / 2;
+if (!elementExists) itemHeight = 20;
+console.log(itemHeight);
 $('.main-page_choice__item')
     .on('mouseenter', function () {
-        if (posTop < offsetItemBuy.top) {
+        if (posTop + itemHeight <= offsetItemBuy.top) {
             $(this).find('.main-page_choice__name-container').hide();
             $(this).find('.main-page_choice__cost').hide();
             $(this).find('.main-page_choice__type-container').hide();
@@ -266,7 +269,7 @@ $('.main-page_choice__item')
 
     })
     .on('mouseleave', function () {
-        if (posTop < offsetItemBuy.top) {
+        if (posTop + itemHeight <= offsetItemBuy.top) {
             $(this).find('.main-page_choice__name-container').show();
             $(this).find('.main-page_choice__cost').show();
             $(this).find('.main-page_choice__type-container').show();

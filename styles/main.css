@@ -83,7 +83,8 @@
 }
 
 .wrapper {
-  max-width: 1208px;
+  max-width: 1238px;
+  padding: 0 15px;
 }
 
 .header-separator {
@@ -114,7 +115,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1208px;
+  width: 1238px;
   position: relative;
 }
 .header .wrapper .top-menu__list {
@@ -945,7 +946,7 @@
   color: var(--color-alpha);
 }
 .main .contacts-form-home {
-  width: 1208px;
+  width: 1238px;
 }
 .main .homeuse {
   display: flex;
