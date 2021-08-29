@@ -196,14 +196,37 @@
         <div class="wrapper">
             <div class="catalog-detail__container">
                 <div class="catalog-detail__slider-container">
+
                     <div class="catalog-detail__single-slide" id="catalog-detail__single-slider1">
-                        <div class="catalog-detail__slide"><img src="./img/catalog-detail/1.png" alt="1"></div>
+                        <div class="catalog-detail__slide"><img src="./img/catalog-detail/1.jpg" alt="1"></div>
+                        <div class="catalog-detail__slide">
+                            <div class="video">
+                                <div class="video-control video-play"></div>
+                                <div class="video-control video-over"></div>
+                                <video class="video_player" preload="auto" poster="./img/main/poster.png">
+                                    <source src="http://media.w3.org/2010/05/sintel/trailer.mp4"
+                                            type='video/mp4'/>
+                                    <source src="http://media.w3.org/2010/05/sintel/trailer.webm"
+                                            type='video/webm'/>
+                                    <source src="http://media.w3.org/2010/05/sintel/trailer.ogv"
+                                            type='video/ogg'/>
+                                </video>
+                            </div>
+                        </div>
                         <div class="catalog-detail__slide"><img src="./img/catalog-detail/2.png" alt="2"></div>
-                        <div class="catalog-detail__slide"><img src="./img/catalog-detail/1.png" alt="1"></div>
+                        <div class="catalog-detail__slide"><img src="./img/catalog-detail/1.jpg" alt="1"></div>
                         <div class="catalog-detail__slide"><img src="./img/catalog-detail/2.png" alt="2"></div>
                     </div>
                     <div class="catalog-detail__slider-previev">
-
+                        <div style="display: none" class="video">
+                            <div class="video-control video-play"></div>
+                            <div class="video-control video-over"></div>
+                            <video class="video_player" preload="auto" poster="./img/main/poster.png">
+                            </video>
+                        </div>
+                        <div class="pictures">
+                            <img src="./img/catalog-detail/1.jpg" alt="1">
+                        </div>
                     </div>
                 </div>
                 <div class="catalog-detail__description-container">
@@ -377,7 +400,9 @@
                 <div class="catalog-detail-comments__container">
                     <div class="catalog-detail-comments__item">
                         <div class="catalog-detail-comments__img-container">
-                            <img src="./img/catalog-detail/comment.png" alt="Изображение отсутствует">
+                            <div>
+                                <img src="./img/catalog-detail/comment.png" alt="Изображение отсутствует">
+                            </div>
                         </div>
                         <div class="catalog-detail-comments__profile-container">
                             <div class="catalog-detail-comments__profile-rating">
@@ -428,7 +453,9 @@
                     </div>
                     <div class="catalog-detail-comments__item">
                         <div class="catalog-detail-comments__img-container">
-                            <img src="./img/catalog-detail/comment.png" alt="Изображение отсутствует">
+                            <div>
+                                <img src="./img/catalog-detail/comment.png" alt="Изображение отсутствует">
+                            </div>
                         </div>
                         <div class="catalog-detail-comments__profile-container">
                             <div class="catalog-detail-comments__profile-rating">

@@ -9,6 +9,9 @@
   color: var(--color-alpha);
 }
 
+.slick-slide {
+  cursor: pointer;
+}
 
 .popup-callback {
   display: flex;
@@ -1811,7 +1814,38 @@
   &__slider-previev {
     flex: 70% 0 1;
     height: 500px;
-    background-color: rebeccapurple;
+    box-shadow: 0 0 21px 0 rgb(0 0 0 / 8%);
+    background-color: var(--color-beta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .video, .pictures {
+      padding: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .video-play {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #fff;
+    }
+
+    .video-play::before {
+      left: 19px;
+      border: 25px solid transparent;
+      border-top-width: 16px;
+      border-bottom-width: 17px;
+      border-left-color: var(--color-beta);
+      border-right-width: 0;
+    }
+
   }
 
   &__single-slide {
@@ -1821,29 +1855,50 @@
     padding: 20px 0;
   }
 
+
   &__slide {
-    max-width: 125px !important;
+    width: 125px;
+    height: 125px;
+    min-width: 50px;
     min-width: 50px;
     margin: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px -1.5px 4.5px 1px rgba(0, 0, 0, 0.1), 1px 0.5px 6.5px 1px rgba(0, 0, 0, 0.15);
 
-  }
+    .video {
+      padding: 5px;
+      .video-play {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px #fff;
+      }
 
-  &__slide.slick-slide {
-    -webkit-box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
-    box-shadow: 0.1px 0.1px 0.2px 0.18px rgba(34, 60, 80, 0.2);
+      .video-play::before {
+        left: 12px;
+        border: 15px solid transparent;
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+        border-left-color: var(--color-beta);
+        border-right-width: 0;
+      }
+    }
+
   }
 
   &__slide.slick-slide:before {
     content: "";
     padding-top: 100%;
     float: left;
+
   }
 
   &__slide img {
-    margin: 0 auto;
-    width: 100%;
-    max-height: 125px;
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
   }
 
   .slick-track {
@@ -2107,13 +2162,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    border-radius: 50%;
+
     flex: 15% 0 1;
 
-    img {
-      height: 100px;
-      width: 100px;
+    div {
+      overflow: hidden;
+      border-radius: 50%;
+
+      img {
+        height: 100px;
+        width: 100px;
+      }
     }
 
   }
@@ -2122,6 +2181,7 @@
     flex: 85% 0 1;
 
     p {
+      text-indent: 1.5em;
       margin: 25px 0 5px 0;
       font-size: 20px;
       font-weight: 300;

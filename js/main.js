@@ -1,17 +1,22 @@
 // Управление по собственной кнопке видео
+
 $('.video-control').click(function () {
-    let $videoContainer = $(this).parent()
-    let $video = $(this).parent().find('.video_player')[0];
-    if ($video.paused) {
-        $video.play();
-        $videoContainer.addClass('video-is-playing');
-    } else {
-        $video.pause();
-        $videoContainer.removeClass('video-is-playing');
-        //	возвращаем постер
-        // $video.load();
+    let isVideoInSlider = $(this).parents('.catalog-detail__slide')[0]
+    if (!isVideoInSlider) {
+        let $videoContainer = $(this).parent()
+        let $video = $(this).parent().find('.video_player')[0];
+        if ($video.paused) {
+            $video.play();
+            $videoContainer.addClass('video-is-playing');
+        } else {
+            $video.pause();
+            $videoContainer.removeClass('video-is-playing');
+            //	возвращаем постер
+            // $video.load();
+        }
     }
 });
+
 
 // Подменю каталога
 let showCatalog = false;
@@ -288,3 +293,38 @@ $('.catalog-detail-comments__rating-form')
         console.log($(this).next())
         $(this).next().slideToggle("fast");
     });
+
+// Перенос картинки по клику
+
+//Переключатель фоток
+$('.catalog-detail .catalog-detail__slide').on("click", function () {
+    //console.log("sdasdad");
+    let clickedImgSrc = $(this).html();
+    //console.log(clickedImgSrc);
+    let isVideo = $(this).find('.video')[0];
+    if (isVideo) {
+        let videoSrs = $(this).find('.video_player').html();
+        let imgPreview = $(this).parents('.catalog-detail__single-slide').next().find('.pictures');
+        imgPreview.hide();
+        let videoPreview0 = $(this).parents('.catalog-detail__single-slide').next().find('.video');
+        videoPreview0.show();
+        let videoPreview = $(this).parents('.catalog-detail__single-slide').next().find('.video_player');
+        videoPreview.html("");
+        videoPreview.fadeOut(250, () => {
+            videoPreview.html(videoSrs);
+            videoPreview.fadeIn();
+        });
+    } else {
+        let videoPreview = $(this).parents('.catalog-detail__single-slide').next().find('.video');
+        let imgPreview = $(this).parents('.catalog-detail__single-slide').next().find('.pictures');
+        imgPreview.html("");
+        imgPreview.show();
+        videoPreview.hide();
+        imgPreview.fadeOut(250, () => {
+            imgPreview.html(clickedImgSrc);
+            imgPreview.fadeIn();
+        });
+    }
+
+
+})
