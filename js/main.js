@@ -310,16 +310,22 @@ $('.catalog-detail .catalog-detail__slide').on("click", function () {
         videoPreview0.show();
         let videoPreview = $(this).parents('.catalog-detail__single-slide').next().find('.video_player');
         videoPreview.html("");
+
         videoPreview.fadeOut(250, () => {
             videoPreview.html(videoSrs);
             videoPreview.fadeIn();
         });
     } else {
+
+
         let videoPreview = $(this).parents('.catalog-detail__single-slide').next().find('.video');
+        videoPreview.addClass('video-is-playing');
+        videoPreview.removeClass('video-is-playing');
+        videoPreview.find('.video_player')[0].pause();
+        videoPreview.hide();
         let imgPreview = $(this).parents('.catalog-detail__single-slide').next().find('.pictures');
         imgPreview.html("");
         imgPreview.show();
-        videoPreview.hide();
         imgPreview.fadeOut(250, () => {
             imgPreview.html(clickedImgSrc);
             imgPreview.fadeIn();
