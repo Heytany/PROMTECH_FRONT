@@ -212,7 +212,6 @@ function isHidden(el) {
 }
 
 let posTop = 0
-let elementExists = $('.header.main-page_header')[0];
 $(window).scroll(function () {
     posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     let hiddenHeader = isHidden($('.header-under_menu')[0]);
@@ -254,27 +253,38 @@ function offset(el) {
 
 
 // Наведение на товар
-let offsetItemBuy = offset($('.main-page_choice__container')[0]);
-let itemHeight = $('.main-page_choice__container').height() / 2;
-if (!elementExists) itemHeight = 20;
-console.log(itemHeight);
-$('.main-page_choice__item')
-    .on('mouseenter', function () {
-        if (posTop + itemHeight <= offsetItemBuy.top) {
-            $(this).find('.main-page_choice__name-container').hide();
-            $(this).find('.main-page_choice__cost').hide();
-            $(this).find('.main-page_choice__type-container').hide();
-            $(this).find('.main-page_choice__options-hover-container').slideToggle("fast");
-        }
+let elementExists = $('.header.main-page_header')[0];
+let elementExists2 = $('.main-page_choice__item')[0];
+if (elementExists2) {
+    let offsetItemBuy = offset($('.main-page_choice__container')[0]);
+    let itemHeight = $('.main-page_choice__container').height() / 2;
+    if (!elementExists) itemHeight = 20;
+//console.log(itemHeight);
+    $('.main-page_choice__item')
+        .on('mouseenter', function () {
+            if (posTop + itemHeight <= offsetItemBuy.top) {
+                $(this).find('.main-page_choice__name-container').hide();
+                $(this).find('.main-page_choice__cost').hide();
+                $(this).find('.main-page_choice__type-container').hide();
+                $(this).find('.main-page_choice__options-hover-container').slideToggle("fast");
+            }
 
-    })
-    .on('mouseleave', function () {
-        if (posTop + itemHeight <= offsetItemBuy.top) {
-            $(this).find('.main-page_choice__name-container').show();
-            $(this).find('.main-page_choice__cost').show();
-            $(this).find('.main-page_choice__type-container').show();
-            $(this).find('.main-page_choice__options-hover-container').toggle();
-        }
+        })
+        .on('mouseleave', function () {
+            if (posTop + itemHeight <= offsetItemBuy.top) {
+                $(this).find('.main-page_choice__name-container').show();
+                $(this).find('.main-page_choice__cost').show();
+                $(this).find('.main-page_choice__type-container').show();
+                $(this).find('.main-page_choice__options-hover-container').toggle();
+            }
+        });
+}
+
+
+// Страница товара форма комментария
+
+$('.catalog-detail-comments__rating-form')
+    .on('click', function () {
+        console.log($(this).next())
+        $(this).next().slideToggle("fast");
     });
-/*}*/
-
