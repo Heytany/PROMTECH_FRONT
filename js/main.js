@@ -116,14 +116,12 @@ $(".catalog-detail-comments__btn-container button").on("click", function () {
 })
 
 $('.homeuse__single-slide').slick({
-    infinite: true,
-    arrows: true,
     dots: false,
-    speed: 300,
+    infinite: true,
+    speed: 500,
 });
 
 $('#news-item__single-slider1').slick({
-    dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 2,
@@ -148,7 +146,6 @@ $('#news-item__single-slider1').slick({
 });
 
 $('#catalog-detail__single-slider1').slick({
-    dots: true,
     infinite: false,
     speed: 300,
     slidesToShow: 3,
