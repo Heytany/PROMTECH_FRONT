@@ -111,6 +111,9 @@ $(".popup-callback__button").on("click", function () {
     $(this).parent().parent().find('.submit-message').slideToggle("fast");
 })
 
+$(".catalog-detail-comments__btn-container button").on("click", function () {
+    $(this).parent().parent().find('.submit-message').slideToggle("fast");
+})
 
 $('.homeuse__single-slide').slick({
     infinite: true,
@@ -290,7 +293,7 @@ if (elementExists2) {
 
 $('.catalog-detail-comments__rating-form')
     .on('click', function () {
-        console.log($(this).next())
+        //console.log($(this).next())
         $(this).next().slideToggle("fast");
     });
 
@@ -334,3 +337,17 @@ $('.catalog-detail .catalog-detail__slide').on("click", function () {
 
 
 })
+
+//Добавляем бургер, но только для верстки
+function IsVerska() {
+    let curLink = window.location.href.split('/')
+    let curPage = curLink[curLink.length - 1].split('.')
+    return 'html' === curPage[curPage.length - 1] || curLink.includes('dist');
+}
+
+if (IsVerska()) {
+    $('.header__body').on("click", function (e) {
+        $('.header__burger, .header__menu').toggleClass('active');
+        $('.header__menu').slideToggle(300);
+    })
+}

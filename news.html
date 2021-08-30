@@ -24,7 +24,8 @@
             <nav class="top-menu">
                 <ul class="top-menu__list">
                     <li class="top-menu__item"><a href="./index.html" class="top-menu__link">ГЛАВНАЯ</a></li>
-                    <li class="top-menu__item drop-down"><a href="./catalog.html" class="top-menu__link">КАТАЛОГ</a></li>
+                    <li class="top-menu__item drop-down"><a href="./catalog.html" class="top-menu__link">КАТАЛОГ</a>
+                    </li>
                     <li class="top-menu__item"><a href="./news.html" class="top-menu__link">НОВОСТИ</a></li>
                     <li class="top-menu__item"><a href="./calculator.html" class="top-menu__link">КАЛЬКУЛЯТОР</a></li>
                     <li class="top-menu__item"><a href="./about.html" class="top-menu__link">О КОМПАНИИ</a></li>
@@ -161,6 +162,23 @@
                     </div>
                 </div>
             </div>
+            <div class="header__body">
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav style="display:none;" class="header__menu">
+                    <ul class="header__list">
+                        <li><a href="./index.html" class="header__link selected">ГЛАВНАЯ</a></li>
+                        <li><a href="./catalog.html" class="header__link">КАТАЛОГ</a></li>
+                        <li><a href="./news.html" class="header__link">НОВОСТИ</a></li>
+                        <li><a href="./calculator.html" class="header__link">КАЛЬКУЛЯТОР</a></li>
+                        <li><a href="./about.html" class="header__link">О КОМПАНИИ</a></li>
+                        <li><a href="./contacts.html" class="header__link">КОНТАКТЫ</a></li>
+                        <li><a href="./homeuse.html" class="header__link">ДЛЯ ДОМА</a></li>
+                        <li><a href="./businessuse.html" class="header__link">ДЛЯ БИЗНЕСА</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
     <div class="header-under_menu">
@@ -172,8 +190,10 @@
             </div>
             <nav class="top-menu">
                 <ul class="top-menu__list">
-                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ ЭЛЕКТРОСТАНЦИИ</a></li>
-                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ БАТАРЕИ</a></li>
+                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ
+                        ЭЛЕКТРОСТАНЦИИ</a></li>
+                    <li class="top-menu__item"><a href="./catalog-items.html" class="top-menu__link">СОЛНЕЧНЫЕ
+                        БАТАРЕИ</a></li>
                     <li class="top-menu__item"><a href="./businessuse.html" class="top-menu__link">ДЛЯ БИЗНЕСА</a></li>
                     <li class="top-menu__item"><a href="./homeuse.html" class="top-menu__link">ДЛЯ ДОМА</a></li>
                 </ul>
@@ -510,12 +530,22 @@
                 </svg>
                 <a href="riirss.ru">riirss.ru</a>
             </p>
+            <p>Комитет РСС по развитию инженерной инфраструктуры
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="36px" height="35px">
+                    <image x="0px" y="0px" width="36px" height="35px"
+                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAjCAYAAAD8BaggAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH5QgVFwMA764qywAADUtJREFUWMOdWGuMXOV5ft7vfOc299mZndmdvd9Y27u+2ywxkEAwVhyhEIpQKseYlgakKI1oiiJUhCqqUJI/aSXaQKKmCjQ0JChAYkxCih3A3Axe29hee+013qt3Z3dmZ3bnPmfOOd/XH7PYJmBI+0pHMzqjb97nfZ/nveijE3un8KemahynhsfgkIvJc0n0dTfhrddGsHoogdUb+jFxanZICBYNxoLFC6cXYFsiXIMTIkGTwpLd0Vbf8Vq10rBhW9crxWIFs5NLcJkDEgQbAqymoHMwBr9PhxDyI745/gzjnEHhLFLK2W1H9k982RvwTi+lir1E6j7FU6ZogmbzpXzAKvOK66gyOSNam9oimlAtJLMpVKtoVTSZYsRqxD7D1xV/oToQQJpjIwsD4VCop7m9a3JuambWHxk/0NN74VSAznZBzQ6E1KLPqaQ405vtvG0uVJ22CZeixyRFYNvdNHWGP+ANYKFrTeO/54pFVyOl8H8CRESQrsTcdLqRSe2mQEvkVHL6wnJD8LXMmuveULx0/he6B5u5L+AnVYdQogDFAWEj4FSB2im4hWKqYgXf0mM9P9e2bP9RudrTnJwofVvV5e+NEHufKcwhRiD5GZQRERgjyi2Xtjg1GbId7gbjmfL61b8JtvmGX4Q3uIoV85AIwmEmyIiAPD6QwsEgASkhpQRznZi3nL7Nmz11W8J/4sD40nWPjGLnrxdnqH327OzjDQnPP2iKPyOlAuASKBred+YyrXB8MDKLxZmcfylT+etwY3iuqePogTWBJ58ItShfqxpxGOlRUK0K15WwfK3QRAlwqoAvCuGPg7wBMNUEKQQCQQIQhRTY3IidKrQ/9PboXb9fHA/uYNx6JRwPZVt7Wy+4jriIQbnn698CqK4ZVefILJQS7+0/eW9DW+CXicSx6lD7T541u1p22CwIZKbAiCDMMIQvCt3Jwu7aBgrGQZkJ+DKnYefSQG4O0qpAgAFMBXlCkA2dil9O3ZzwD/sqnk3/WFiM7ChkiqtDceMoEy6EbUM6DpQ777gHjutCCIlSrhpLTmZu9IQD57qumk4NtT3+C6WtZ6tTtoHlWbCeq8FqRVCtAKd9I3jqDHgxCYeb0HMTKMbWQTavBpgCFFOgxXFQdhKyuAgpHLihdugstb5RP9kxl9/6c6fCLTB7vaGzs0yVIHKh3HDtrVjKF7FcKFBmsuDPXChtifWJ4c8lHvtXnmjcXqs40NJnYRthUDELXpiHIg04tglJfpiuC7VSgq00QihhsFIFEBxCCcFhQQibwS8s8FIRyC3DoiZwe3Z9Y7w0VVCvPzh27EInNMfna1RnbWmDN4BDUQiZTDk6eSK9q3VV1+mN3b++yfCU/kJG1kK3KkBjC3TpQjIOZ3IJvvZvIbrpPgAMdq0KQMInJSCdi/pkjCCEhGQMQhAACS9JhKVErVaB99Cd38+z4deT432FQqqUmK0UQAoDW7WmHWsGO+HRzVilxEJNzZPlmPKHB0V8HRQIKJoKxhUwVQfTDBBToJkeDB8bxct/eAWqZkDVTHDdA24EwM36I7gP3AxA1X3QTS900wfV8IMZAXiCcZhrH9ba+Av/3Nyjve7mpF6zauvBXPAPzuUhgfj8bOFz0fbgc6tbXrxJ+Mx2xfBBOrXLGkK9pAHAMAz89EdP4aXfPoP7778fTU1NqNVqcBwHPp8PlmVhZmYGsVgMpmnCsix4PB7Mzc0hGo1iz549MBLbEIz37WiefWfbheAGT8UqFwNeHXxiJolSquSmpovGus+DBbQju0SoE+Q6kPgEk/WKtGoWdu/ejb179yKVSqG/vx+WZWFpaQnJZBKu66KzsxPhcBijo6OwLAuccwwNDWHPnj0gAHrX16lt6tE7xlu3PbJ4vrpDEUqNEyMq5ivXKgqbiniGdfDSJjKCkMK54kipVS3c8uUv4Zqt6zAwMIBSqQRFUeA4DgzDgOM4ICJYlgXTNLF9+3aoqgoAaG9vvzTE49ci6KMveo30k8GNHScX59NlPtDWBZF2lvIKqYkGawiGl4joiiNOACBh4/av7gQA7N69G/9fU1Qvwk3dvf398/Tyi2Y43mYwPj49KRWPbq0fzB802JFbpR7+2Hy53Dwaw88OJfHukTEQVcBWwIuVM0RyRWr1Ls1WiHdlvf+ylfeQEo4w8AXXwzbrw126p29OWK7NwwlTmzxRLs/Pp43+UC0GboAgcCVIOif88XwOv0rOAJ4qYIsVT+yi6EEAnBUEAMAIUAgQsq5BRvVP4UUxrmNLohx1XFrIZSubuSo9V8+cm7q7jezH/T7O3E9bWFYKzRUSt2xrxaM7m/DDVyfw3NEknv6rDShZLu5++gQe2tkHIolr2kP4z0Oz+J+xDJ65ax0mMxV8+/kzsKQEiAChwIGBsFHSWzo86exMjZgrnRNda6K/CoT9+WLRcfApdGElMFcIfLE/itPzRTiORHejFy1hE/1xP2J+Dd0RE9+5sQdNPg3bV0VRKdTwyqk01if8YPTRAE2lBstRS2PH5zdkk/lNTLHhLExlVi0ti5gLM8WcCiTYpROfQN6HbzXO6oFKCc4IfIU1CSBftcEVguNKBHwaBlsCUBghoCl16gBAEprULCytNc80Nta9selFVtWscrzDf7BsmU6Wus8wK19P50UxXApJSgmSAKkcz44sQjV0LDqEkayN92ZL2D+ew4WywOG5Mr73xykcSlbw7GgGWRCEruLl8TwWbAJUDVA4wBhW+ZPO4nJ/igt1gHNawycyi7BtEQ16go7gW4+5pfcFpGSfVPhEgEuEHreC994exX3vDcMB0M0ZHn3iVUACPSrD3t+kYQuJfSuCblUY/umxeUgAPZzVN1JJ0ISFtebi1PxC87RdqXqIQod4Qm9Grbl2tJAp3zE9l3i3o8s4RtX8ZqZ7IT+mJ0JJ0/HgkZfw8P53AMUCeQwQfbTAPn5qpX/Jy5JfY3D6spjf2f3KO0dNFo7JAcMwDvN42ItcAWxmbD5nM6O8EOn9ZUtuYrNsWge4tY9lSQLQLQueiB9Yuxp44wjgOJeo/bCk5WXepQCIAapS35UUBagC5RsKmChs/G9d00Z718VG163tZdwfCaGhOZrO56qFbLIQyLq7n23JP/AdES4kmGrW/+xPo61UIf/ubsgdm4F/ewq0lLuUlmIR0HRQ0AtZrgKuAHwmZK4I6u8Evfs+cGwcVncR6Wv7Xpo5/oXS0kxx14yCF7NzhQKXugRUgmMU901OTX1XKn2jkWtvfjCR2v+kaLsG5IqPZQiQoIYg5LvDoL4OyL5OyJYESNXqDVII0LGTEEE/GFch168Cjo9AbtwA+uGP4Q6fRGVPuTbnv/fhatHUhcibzNXV0pIDpc1Yg7MjY8hnyxQPNS77wx458kFDsSdyPKhry6vhiwHCXaFDASoLMA7koaYjkGt7QQfeBC0uAy/sA5WrwAeToPdPAydGQfkCZKkMnDoHzCZB4zOQ+99HacsRzN++6++PH74xOXF8fMf1uzb8V+ea5my8pwH8qoHeD0tadva2nho/MfuXo0dE/0HfrvtvVh9rU5mxBQ3toJXdSEiC1LzA8y9DeX7fxZwROHDgOKgu34v5rH9zAXBIAJXtaST/ZstP3z701VeXpzLxxq7gwXh7pKz7VEhXgM68PXeRDqYQXnvhaBA1t/PCeatj/ednp7Ym/uUnRqJ5yG3og2s7kB8cBN4qwVvTwQ8HofpCIAB2uQB3cAnuvAZqtqFNtYLbHCRtQOFwqy7crjGkvzb0syPnvvv9+cnK6lqhHBvc1v10Y0uoClaPjS/OLl4GiKEh4sklJzKM8XJXqbxh9J3z37xtbfGZHzQ07N/j2gxKJQ9no0RZt2HckEM+FgKkCz09A0sANRswDYaKLwtphkGtg2ClBVByxD47fd2jZw7f80IlW93qVEvextbQf4TDPoiKAyHq2aSXnnjjI4rlqgJiwMk3J2JQ+a1c9xxenJtwb935+oZ24+0HpJMaICiwHBWaRqjWJDROUBiDbbvQNULZ5eD+AKSigusMtYx7cNL9xkNvvb6mWk7n7910U+cPGGdVJrTZWJMXl69fyp1f+QaIqP4wqs8iIbE4lyvFEqFZJt3B5QWxuaxuf21k/KrfBZsChwy15OOUa6pWqyp8UVikwK0sIWDU4Cgc0h8GyEgVS4G945OrHzqzeNf3Thzr+FI0qjdCcZ/1hMzFSJM/5VQlPF71I4CufPshAd3QFqxS7c2WzuBZVbGvnzzvV/elbxvrH7z9m03RmUq4Yeq6Wu7NXkMPR0x/kGaFY1XK/rnUdPNY0ek4P59s1FU91LCYXP7b1i510uM1pzPp5dOe8Mq90CcsFp96PySlBAgZ3atmao5VHvrKVctvPHfyvkKxozx2qnPDphu2PWU5/nItd2Pj+ZFidzhmSjhSy6crHZpXqLCdwXicDweigYOciUNerwkp6gxcyf6sCyshBDSPOm34NEQi3kesctnn94sBTrbFtFuQTxV7igsLV1ezWjXe6l82/W6yfbAxm5vLHzY1pD2tQWf+/AKEKT7T1/8CdJBBlMogAbIAAAAASUVORK5CYII="/>
+                </svg>
+                <a href="www.riirss.ru">riirss.ru</a>
+            </p>
         </div>
         <div class="bottom-info__meta-link">
             <a href="" data-src="#01" class="modal-inline_no-arrows">Политика конфиденциальности</a>
             <span>ПРОМТЭК. Все права защищены. <br>
             2013 - 2021</span>
-            <a href="#">Incomesite.ru</a>
+            <a href="http://incomesite.ru/">Incomesite.ru</a>
         </div>
     </div>
 </footer>
