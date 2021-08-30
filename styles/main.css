@@ -2153,12 +2153,82 @@
     flex: 100% 0 1;
   }
 }
-/*OTHERS*/
+/*OTHERS LABEL TEXT AND CALLBACK FORM*/
 @media (max-width: 1160px) {
+  .main .main-page_capabilities-and-choice .main-page_capabilities__main-label,
+.main .main-page_capabilities-and-choice .main-page_choice__main-label,
+.main .main-page_production__main-label,
+.main .main-page_news .main-page_news__main-label,
+.main .catalog__main-label,
+.main .about__main-label {
+    font-size: 55px;
+    line-height: 1.3;
+  }
   .main .homeuse__main-label, .main .calculator__main-label,
 .main .news-item__main-label {
     margin: 20px 0 25px 0;
     font-size: 50px;
+  }
+  .main .homeuse__middle-label, .main .contacts__form-label, .main .catalog-items.catalog-detail_item .catalog-items__main-label {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+  .main .homeuse__semi-label, .main .calculator__semi-label, .main .news-item__semi-label, .main .about h4,
+.main .catalog-detail__options-container h4, .main .catalog-detail-comments h2, .main .catalog-detail__description-container h3 {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  .main .homeuse span, .main .about p, .main .news-item__text-label, .main .catalog-detail__options-container p,
+.main .catalog-detail-comments__profile-container p, .main .main .calculator__meta-label {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+}
+@media (max-width: 999px) {
+  .main .main-page_capabilities-and-choice .main-page_capabilities__main-label,
+.main .main-page_capabilities-and-choice .main-page_choice__main-label,
+.main .main-page_production__main-label,
+.main .main-page_news .main-page_news__main-label,
+.main .catalog__main-label,
+.main .about__main-label {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+  .main .homeuse__main-label, .main .calculator__main-label,
+.main .news-item__main-label {
+    font-size: 40px;
+  }
+  .main .homeuse__middle-label, .main .contacts__form-label, .main .catalog-items.catalog-detail_item .catalog-items__main-label {
+    font-size: 25px;
+    line-height: 1.1;
+  }
+  .main .homeuse__semi-label, .main .calculator__semi-label, .main .news-item__semi-label, .main .about h4,
+.main .catalog-detail__options-container h4, .main .catalog-detail-comments h2, .main .catalog-detail__description-container h3 {
+    font-size: 23px;
+    line-height: 1.1;
+  }
+  .main .contacts__callback-container .main-page_deal-callback__form {
+    flex: 70% 0 1;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 666px) {
+  .main .main-page_capabilities-and-choice .main-page_capabilities__main-label,
+.main .main-page_capabilities-and-choice .main-page_choice__main-label,
+.main .main-page_production__main-label,
+.main .main-page_news .main-page_news__main-label,
+.main .catalog__main-label,
+.main .about__main-label {
+    font-size: 40px;
+    line-height: 1.3;
+  }
+  .main .homeuse__main-label, .main .calculator__main-label,
+.main .news-item__main-label {
+    font-size: 34px;
+  }
+  .main .contacts__callback-container .main-page_deal-callback__form {
+    flex: 100% 0 1;
+    padding: 0 5px;
   }
 }
 

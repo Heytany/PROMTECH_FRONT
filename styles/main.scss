@@ -2668,15 +2668,110 @@
   }
 }
 
-/*OTHERS*/
+/*OTHERS LABEL TEXT AND CALLBACK FORM*/
 
 @media (max-width: 1160px) {
   .main {
+
+    .main-page_capabilities-and-choice .main-page_capabilities__main-label,
+    .main-page_capabilities-and-choice .main-page_choice__main-label,
+    .main-page_production__main-label,
+    .main-page_news .main-page_news__main-label,
+    .catalog__main-label,
+    .about__main-label,
+    {
+      font-size: 55px;
+      line-height: 1.3;
+    }
+
+
     .homeuse__main-label, .calculator__main-label,
     .news-item__main-label {
       margin: 20px 0 25px 0;
       font-size: 50px;
     }
-  }
 
+    .homeuse__middle-label, .contacts__form-label, .catalog-items.catalog-detail_item .catalog-items__main-label {
+      font-size: 26px;
+      line-height: 1.1;
+    }
+
+    .homeuse__semi-label, .calculator__semi-label, .news-item__semi-label, .about h4,
+    .catalog-detail__options-container h4, .catalog-detail-comments h2, .catalog-detail__description-container h3 {
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .homeuse span, .about p, .news-item__text-label, .catalog-detail__options-container p,
+    .catalog-detail-comments__profile-container p, .main .calculator__meta-label {
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+  }
+}
+
+@media (max-width: 999px) {
+  .main {
+
+    .main-page_capabilities-and-choice .main-page_capabilities__main-label,
+    .main-page_capabilities-and-choice .main-page_choice__main-label,
+    .main-page_production__main-label,
+    .main-page_news .main-page_news__main-label,
+    .catalog__main-label,
+    .about__main-label,
+    {
+      font-size: 48px;
+      line-height: 1.2;
+    }
+
+    .homeuse__main-label, .calculator__main-label,
+    .news-item__main-label {
+      font-size: 40px;
+    }
+
+    .homeuse__middle-label, .contacts__form-label, .catalog-items.catalog-detail_item .catalog-items__main-label {
+      font-size: 25px;
+      line-height: 1.1;
+    }
+
+    .homeuse__semi-label, .calculator__semi-label, .news-item__semi-label, .about h4,
+    .catalog-detail__options-container h4, .catalog-detail-comments h2, .catalog-detail__description-container h3 {
+      font-size: 23px;
+      line-height: 1.1;
+    }
+
+    .contacts__callback-container .main-page_deal-callback__form {
+      flex: 70% 0 1;
+      padding: 0 5px;
+    }
+
+  }
+}
+
+@media (max-width: 666px) {
+  .main {
+
+    .main-page_capabilities-and-choice .main-page_capabilities__main-label,
+    .main-page_capabilities-and-choice .main-page_choice__main-label,
+    .main-page_production__main-label,
+    .main-page_news .main-page_news__main-label,
+    .catalog__main-label,
+    .about__main-label,
+    {
+      font-size: 40px;
+      line-height: 1.3;
+    }
+
+    .homeuse__main-label, .calculator__main-label,
+    .news-item__main-label {
+      font-size: 34px;
+    }
+
+    .contacts__callback-container .main-page_deal-callback__form {
+      flex: 100% 0 1;
+      padding: 0 5px;
+    }
+
+  }
 }
