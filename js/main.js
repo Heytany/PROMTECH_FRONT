@@ -11,8 +11,6 @@ $('.video-control').click(function () {
         } else {
             $video.pause();
             $videoContainer.removeClass('video-is-playing');
-            //	возвращаем постер
-            // $video.load();
         }
     }
 });
@@ -20,18 +18,22 @@ $('.video-control').click(function () {
 
 // Подменю каталога
 let showCatalog = false;
+let dropDownCatalog = $('.catalog-drop-down');
 $('.drop-down')
     .on('mouseenter', function () {
-        $('.catalog-drop-down').slideToggle("fast").css("display", "flex");
+        showCatalog = true;
+        if (dropDownCatalog.is(':hidden')) {
+            dropDownCatalog.slideToggle("fast").css("display", "flex");
+        }
     })
     .on('mouseleave', function () {
         showCatalog = false;
         setTimeout(function () {
-            if (!showCatalog) $('.catalog-drop-down').slideToggle("fast");
+            if (!showCatalog) dropDownCatalog.hide();
         }, 1300)
     });
 
-$('.catalog-drop-down')
+dropDownCatalog
     .on('mouseenter', function () {
         setTimeout(function () {
             showCatalog = true;
@@ -40,7 +42,7 @@ $('.catalog-drop-down')
     .on('mouseleave', function () {
         showCatalog = false;
         setTimeout(function () {
-            $('.catalog-drop-down').hide();
+            dropDownCatalog.hide();
         }, 300)
     });
 
