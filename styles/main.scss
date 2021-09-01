@@ -2175,6 +2175,29 @@
     }
   }
 
+  //////
+
+  &__mobile-slide-container {
+    max-width: 100%;
+    display: none;
+    margin: 15px 0;
+  }
+
+  .image-slider__slide.swiper-slide {
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    margin: 15px 5px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--color-gamma, var(--color-gamma));
 }
 
 .catalog-detail-comments {
@@ -2715,6 +2738,7 @@
     }
 
     .contacts p, .homeuse span, .about p, .about span, .news-item__text-label, .catalog-detail__options-container p,
+    .catalog-detail__options-container ol li,
     .catalog-detail-comments__profile-container p, .main .calculator__meta-label {
       font-size: 18px;
       line-height: 1.1;
@@ -2854,6 +2878,7 @@
     }
 
     .contacts p, .homeuse span, .about p, .about span, .news-item__text-label, .catalog-detail__options-container p,
+    .catalog-detail__options-container ol li,
     .catalog-detail-comments__profile-container p, .main .calculator__meta-label {
       font-size: 14px;
       line-height: 1;
@@ -3424,6 +3449,12 @@
       .catalog-detail__slider-container {
         flex: 80% 0 1;
       }
+
+      .catalog-detail__single-slide {
+        margin-right: 10px;
+      }
+
+
     }
 
     @media (max-width: 555px) {
@@ -3436,13 +3467,62 @@
     }
 
     @media (max-width: 500px) {
-      .catalog-detail__slider-previev {
-        flex: 100% 0 1;
-      }
+
+
+      .catalog-detail__slider-previev,
       .catalog-detail__single-slide {
         display: none
+      }
+
+      .catalog-detail__mobile-slide-container {
+        display: block;
+      }
+
+      .video-play {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 0 0 3px #fff;
+      }
+
+      .video-play::before {
+        margin: auto;
+        left: 18px;
+        border: 20px solid transparent;
+        border-top-width: 12px;
+        border-bottom-width: 12px;
+        border-left-color: var(--color-beta);
+      }
+
+      .catalog-detail__cost-container {
+        flex-wrap: wrap;
+
+        p {
+          margin-bottom: 10px;
+        }
+
       }
     }
 
   }
+
+  .catalog-detail-comments {
+    @media (max-width: 888px) {
+      .catalog-detail-comments__img-container div img {
+        width: 75px;
+        height: 75px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .catalog-detail-comments__img-container div img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
 }
+
+
+
+

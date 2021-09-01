@@ -167,25 +167,7 @@ $('#catalog-detail__single-slider1').slick({
         }]
 });
 
-$('#catalog-detail__single-slider2').slick({
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 555,
-            settings: {
-                slidesToShow: 2.4,
-            }
-        },
-        {
-            breakpoint: 500,
-            settings: {
-                settings: "unslick"
-            }
-        }]
-});
+
 
 (function () {
     var init = function () {
