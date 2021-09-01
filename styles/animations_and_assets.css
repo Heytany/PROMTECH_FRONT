@@ -285,7 +285,7 @@ input[type=checkbox]:checked + label:after {
 }
 
 .rs-container {
-  width: 105% !important;
+  width: 99% !important;
 }
 
 .rs-container .rs-selected {

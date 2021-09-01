@@ -15,7 +15,6 @@ $('.video-control').click(function () {
     }
 });
 
-
 // Подменю каталога
 let showCatalog = false;
 let dropDownCatalog = $('.catalog-drop-down');
@@ -148,26 +147,42 @@ $('#news-item__single-slider1').slick({
 });
 
 $('#catalog-detail__single-slider1').slick({
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
     vertical: true,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 555,
             settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true
+                slidesToShow: 2.4,
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 500,
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+                settings: "unslick"
+            }
+        }]
+});
+
+$('#catalog-detail__single-slider2').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 555,
+            settings: {
+                slidesToShow: 2.4,
+            }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                settings: "unslick"
             }
         }]
 });
@@ -201,16 +216,18 @@ $('#catalog-detail__single-slider1').slick({
 })();
 
 // Наведение на товар в каталоге
-
-$('.catalog-items__choice-wrapper')
-    .on('mouseenter', function () {
-        $(this).find('.catalog-items__choice-hover').toggle();
-    })
-    .on('mouseleave', function () {
-        $(this).find('.catalog-items__choice-hover').toggle();
-    });
-
-/*}*/
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    $('.catalog-items__choice-mobile').show();
+    $('.catalog-items__choice-hover').hide();
+} else {
+    $('.catalog-items__choice-wrapper')
+        .on('mouseenter', function () {
+            $(this).find('.catalog-items__choice-hover').show();
+        })
+        .on('mouseleave', function () {
+            $(this).find('.catalog-items__choice-hover').hide();
+        });
+}
 
 // Where el is the DOM element you'd like to test for visibility
 function isHidden(el) {
