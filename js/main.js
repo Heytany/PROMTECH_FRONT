@@ -45,7 +45,7 @@ dropDownCatalog
         }, 300)
     });
 
-
+//Запрет на увеличение сайта кропом пальцев или двойным тапом
 function iOS() {
     return [
             'iPad Simulator',
@@ -59,7 +59,6 @@ function iOS() {
         || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 }
 
-//Запрет на увеличение сайта кропом пальцев или двойным тапом
 if (iOS() === true) {
     let lastTouchEnd = 0;
     document.addEventListener('touchend', function (event) {
@@ -169,7 +168,7 @@ $('#catalog-detail__single-slider1').slick({
 });
 
 
-
+//Горизонтальный слайдер цен и мощности
 (function () {
     var init = function () {
 
@@ -212,6 +211,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
         });
 }
 
+//Плавающее меню через JS и скрытые блоки -ОТКЛОНЕНО
+
 // Where el is the DOM element you'd like to test for visibility
 function isHidden(el) {
     var style = window.getComputedStyle(el);
@@ -226,30 +227,33 @@ $(window).scroll(function () {
 
     //let elementExists = $('.header.main-page_header')[0]; - если для других страниц тоже понадобится плавающее меню
 
-    if (((posTop + 25) > $('.header.main-page_header').height()) && (hiddenHeader == false)) {
-        //$('.header.main-page_header').css("height",this.height());
-        $('.header.main-page_header').css("background-color", "none");
-        $('.header.main-page_header').backgroundImage = "none";
-        $('.header-under_menu').hide();
-        $('.header-separator').hide();
-        $('.header-background').css("position", "fixed").css("background-color", "#e1e1e1");
-        //$(window).scrollTop(200);
-    }
+    /*    if (((posTop + 25) > $('.header.main-page_header').height()) && (hiddenHeader == false)) {
+            //$('.header.main-page_header').css("height",this.height());
+            $('.header.main-page_header').css("background-color", "none");
+            $('.header.main-page_header').backgroundImage = "none";
+            $('.header-under_menu').hide();
+            $('.header-separator').hide();
+            $('.header-background').css("position", "fixed").css("background-color", "#e1e1e1");
+            //$(window).scrollTop(200);
+        }
 
-    //console.log(posTop);
-    //console.log(isHidden($('.header-separator')[0]));
-    if ((hiddenHeader == true) && (posTop + 25) < 150) {
-        $('.header.main-page_header').css("background-color", "var(--color-omega)").css("z-index", "200");
-        $('.header.main-page_header').backgroundImage = "url('../img/main/header_background.png')";
-        $('.header-under_menu').show();
-        $('.header-separator').show();
-        $('.header-background').css("position", "unset").css("background-color", "rgba(128, 128, 128, 0.28)");
-    }
+        //console.log(posTop);
+        //console.log(isHidden($('.header-separator')[0]));
+        if ((hiddenHeader == true) && (posTop + 25) < 150) {
+            $('.header.main-page_header').css("background-color", "var(--color-omega)").css("z-index", "200");
+            $('.header.main-page_header').backgroundImage = "url('../img/main/header_background.png')";
+            $('.header-under_menu').show();
+            $('.header-separator').show();
+            $('.header-background').css("position", "unset").css("background-color", "rgba(128, 128, 128, 0.28)");
+        }*/
 
 
     //console.log(posTop, " TOP");
 
 });
+
+
+// Наведение на товар
 
 function offset(el) {
     var rect = el.getBoundingClientRect(),
@@ -258,10 +262,17 @@ function offset(el) {
     return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
 
-
-// Наведение на товар
-let elementExists = $('.header.main-page_header')[0];
+let elementExists = $('.header.header-background-blank')[0];
 let elementExists2 = $('.main-page_choice__item')[0];
+
+
+$('.main-page_choice__row').on('mouseleave', function () {
+    $(this).find('.main-page_choice__options-hover-container').hide();
+    $(this).find('.main-page_choice__name-container').show();
+    $(this).find('.main-page_choice__cost').show();
+    $(this).find('.main-page_choice__type-container').show();
+});
+
 if (elementExists2) {
     let offsetItemBuy = offset($('.main-page_choice__container')[0]);
     let itemHeight = $('.main-page_choice__container').height() / 2;
@@ -282,7 +293,7 @@ if (elementExists2) {
                 $(this).find('.main-page_choice__name-container').show();
                 $(this).find('.main-page_choice__cost').show();
                 $(this).find('.main-page_choice__type-container').show();
-                $(this).find('.main-page_choice__options-hover-container').toggle();
+                $(this).find('.main-page_choice__options-hover-container').hide();
             }
         });
 }
