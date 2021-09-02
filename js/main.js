@@ -122,6 +122,7 @@ $('.homeuse__single-slide').slick({
     speed: 500,
 });
 
+// Слик слайдер новости
 $('#news-item__single-slider1').slick({
     infinite: true,
     speed: 300,
@@ -145,7 +146,7 @@ $('#news-item__single-slider1').slick({
             }
         }]
 });
-
+//Вертикальный Слик слайдер товар
 $('#catalog-detail__single-slider1').slick({
     infinite: true,
     speed: 300,

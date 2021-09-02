@@ -23,3 +23,12 @@ var swiper = new Swiper('.image-slider', {
     },
 
 });
+
+swiper.on('slideChange', function () {
+    let videoExists = $('.catalog-detail .swiper-container').find('.video_player');
+    let videoContainer = $('.catalog-detail .swiper-container').find('.video');
+    if (videoExists.length != 0)
+        for (let i = 0; i < videoExists.length; i++)
+            videoExists[i].pause();
+    videoContainer.removeClass('video-is-playing');
+});
