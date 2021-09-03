@@ -1099,9 +1099,16 @@
     p {
       margin: 0 0 25px 0;
       font-size: 22px;
-      font-weight: 300;;
+      font-weight: 300;
       line-height: 1.09;
       color: #000;
+
+      a {
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.09;
+        color: #000;
+      }
 
       b {
         font-weight: 400;
@@ -1763,7 +1770,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 
   }
 
@@ -1840,6 +1846,7 @@
   }
 
   &__choice-wrapper {
+    position: relative;
     box-shadow: 0 0 21px 0 rgb(0 0 0 / 8%);
     background-color: var(--color-beta);
     display: flex;
@@ -2199,7 +2206,11 @@
   .image-slider__slide.swiper-slide {
     img {
       width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 30px auto;
+    }
+
+    .video_player {
+      margin-bottom: 70px;
     }
   }
 
@@ -2750,7 +2761,7 @@
       line-height: 1.1;
     }
 
-    .contacts p, .homeuse span, .about p, .about span, .news-item__text-label, .catalog-detail__options-container p,
+    .contacts p, .contacts p a, .homeuse span, .about p, .about span, .news-item__text-label, .catalog-detail__options-container p,
     .catalog-detail__options-container ol li,
     .catalog-detail-comments__profile-container p, .main .calculator__meta-label {
       font-size: 18px;
@@ -2890,7 +2901,7 @@
       line-height: 1.1;
     }
 
-    .contacts p, .homeuse span, .about p, .about span, .news-item__text-label, .catalog-detail__options-container p,
+    .contacts p, .contacts p a, .homeuse span, .about p, .about span, .news-item__text-label, .catalog-detail__options-container p,
     .catalog-detail__options-container ol li,
     .catalog-detail-comments__profile-container p, .main .calculator__meta-label {
       font-size: 14px;
@@ -3546,6 +3557,23 @@
   .catalog-detail-comments {
     @media (max-width: 888px) {
 
+      .catalog-detail-comments__review-item {
+        margin-bottom: 30px;
+      }
+
+      .catalog-detail-comments__review-item:nth-of-type(2) {
+        margin-bottom: 0;
+      }
+
+      .catalog-detail-comments__review-item p {
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      .catalog-detail-comments__review-item textarea {
+        height: 120px;
+      }
+
       .catalog-detail-comments__item-separator {
         width: 75%;
         margin: 20px auto;
@@ -3567,6 +3595,22 @@
     }
 
     @media (max-width: 500px) {
+
+      .catalog-detail-comments__review-item {
+        margin-bottom: 15px;
+      }
+
+      .catalog-detail-comments__review-item:nth-of-type(2) {
+        margin-bottom: 0;
+      }
+
+      .catalog-detail-comments__review-item textarea {
+        height: 80px;
+      }
+      .catalog-detail-comments__review-item p {
+        font-size: 18px;
+      }
+
       .catalog-detail-comments__img-container {
         margin-right: 6px;
       }

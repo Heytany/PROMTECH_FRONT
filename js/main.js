@@ -361,3 +361,10 @@ if (IsVerska()) {
         $('.header__menu').slideToggle(300);
     })
 }
+
+//Открытие одного и того же попапа по клику на оставить заявку Каталог
+
+$('.catalog-items__choice-link-container button').on("click", function () {
+    console.log('123123')
+    $('#pp-btn').click();
+})
