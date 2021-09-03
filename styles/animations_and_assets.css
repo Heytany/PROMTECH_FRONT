@@ -1,8 +1,11 @@
 @charset "UTF-8";
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 /*
 Анимации и стили кнопок и ссылок
 */
-
 .btn-style_alpha,
 .btn-style_beta,
 .top-menu__link {
@@ -11,12 +14,26 @@
     transition: all 250ms ease;
 }
 
+.menu-active,
 .top-menu__link:hover {
     color: var(--color-gamma);
 }
 
 .top-menu__link:active {
     color: #04ad81;
+}
+
+.btn-style_alpha {
+    border: solid 2px var(--color-beta);
+    background-color: var(--color-omega);
+}
+
+.btn-style_alpha span {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--color-beta);
 }
 
 .btn-style_alpha:hover {
@@ -36,63 +53,6 @@
 .btn-style_beta:active {
     background-color: #04ad81;
     box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
-}
-
-
-@media (max-width: 768px) {
-    .btn-style_alpha,
-    .btn-style_beta,
-    .top-menu__link {
-        -webkit-transition: none;
-        -ms-transition: none;
-        transition: none;
-    }
-
-    .top-menu__link:hover {
-        color: var(--color-gamma);
-    }
-
-    .top-menu__link:active {
-        color: #04ad81;
-    }
-
-    .btn-style_alpha:hover {
-        background-color: #334575;
-    }
-
-    .btn-style_alpha:active {
-        background-color: #1f2b4a;
-        border: solid 2px var(--color-beta);
-    }
-
-    .btn-style_beta:hover {
-        background-color: var(--color-gamma);
-        box-shadow: none;
-    }
-
-    .btn-style_beta:active {
-        background-color: var(--color-gamma);
-        box-shadow: none;
-    }
-}
-
-
-.menu-active {
-    color: var(--color-gamma);
-}
-
-
-.btn-style_alpha {
-    border: solid 2px var(--color-beta);
-    background-color: var(--color-omega);
-}
-
-.btn-style_alpha span {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: normal;
-    text-align: center;
-    color: var(--color-beta);
 }
 
 .btn-style_beta {
@@ -163,12 +123,6 @@
 
 .video-play:hover::before {
     transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-    .video-play:hover::before {
-        transform: scale(1);
-    }
 }
 
 .video video {
