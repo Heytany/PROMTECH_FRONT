@@ -307,10 +307,15 @@ input[type="checkbox"]:checked + label:after, {
   display: none !important;
 }
 
+
 .rs-pointer {
   width: 20px !important;
   border-radius: 50% !important;
   box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1) !important;
+}
+
+.rs-scale span ins {
+  display: none !important;
 }
 
 .rs-pointer::after {

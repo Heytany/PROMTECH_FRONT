@@ -1729,6 +1729,14 @@
     margin: 10px 0 0 0;
   }
 
+  &__slider-container_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
+
   &__check-container {
     margin: 20px 0;
   }

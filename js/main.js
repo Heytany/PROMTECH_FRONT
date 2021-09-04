@@ -169,6 +169,8 @@ $('#catalog-detail__single-slider1').slick({
 
 
 //Горизонтальный слайдер цен и мощности
+let minRub = 2500, maxRub = 41000,
+    minVt = 20, maxVt = 540;
 (function () {
     var init = function () {
 
@@ -176,26 +178,32 @@ $('#catalog-detail__single-slider1').slick({
             target: '#catalog-items__slider1',
             range: true,
             tooltip: false,
-            values: {min: 2500, max: 41000},
+            values: {min: minRub, max: maxRub},
             set: [3500, 31000],
             step: 500,
             labels: false,
-            scale: true,
+            scale: false,
         });
 
         var sliderPower = new rSlider({
             target: '#catalog-items__slider2',
             range: true,
             tooltip: false,
-            values: {min: 20, max: 540},
+            values: {min: minVt, max: maxVt},
             set: [11, 222],
             step: 20,
             labels: false,
-            scale: true,
+            scale: false,
         });
+
+
     };
     window.onload = init;
 })();
+$('#catalog-items__slider-span1').text(minRub + ' руб');
+$('#catalog-items__slider-span2').text(maxRub + ' руб');
+$('#catalog-items__slider-span3').text(minVt + ' Вт');
+$('#catalog-items__slider-span4').text(maxVt + ' Вт');
 
 // Наведение на товар в каталоге
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {

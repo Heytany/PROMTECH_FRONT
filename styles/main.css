@@ -1423,6 +1423,13 @@
   padding: 0 5%;
   margin: 10px 0 0 0;
 }
+.catalog-items__slider-container_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
 .catalog-items__check-container {
   margin: 20px 0;
 }
