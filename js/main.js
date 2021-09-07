@@ -263,7 +263,7 @@ $(window).scroll(function () {
         }*/
 
 
-    //console.log(posTop, " TOP");
+    // console.log(posTop, " TOP");
 
 });
 
@@ -277,7 +277,7 @@ function offset(el) {
     return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
 
-let elementExists = $('.header.header-background-blank')[0];
+let elementExists = $('.homeuse.homeuse-separator')[0];
 let elementExists2 = $('.main-page_choice__item')[0];
 
 
@@ -289,13 +289,20 @@ $('.main-page_choice__row').on('mouseleave', function () {
 });
 
 if (elementExists2) {
-    let offsetItemBuy = offset($('.main-page_choice__container')[0]);
-    let itemHeight = $('.main-page_choice__container').height() / 2;
-    if (!elementExists) itemHeight = 20;
-//console.log(itemHeight);
+    let offsetItemBuy;
+    let miniOffset;
+    if (elementExists) {
+        miniOffset = 470;
+        offsetItemBuy = offset($('.homeuse.homeuse-separator')[0]);
+        console.log(offsetItemBuy.top)
+    } else {
+        miniOffset = 440;
+        offsetItemBuy = offset($('.main-page_deal-callback__container')[0]);
+    }
+
     $('.main-page_choice__item')
         .on('mouseenter', function () {
-            if (posTop + itemHeight <= offsetItemBuy.top) {
+            if ((posTop + miniOffset) < offsetItemBuy.top) {
                 $(this).find('.main-page_choice__name-container').hide();
                 $(this).find('.main-page_choice__cost').hide();
                 $(this).find('.main-page_choice__type-container').hide();
@@ -304,12 +311,10 @@ if (elementExists2) {
 
         })
         .on('mouseleave', function () {
-            if (posTop + itemHeight <= offsetItemBuy.top) {
-                $(this).find('.main-page_choice__name-container').show();
-                $(this).find('.main-page_choice__cost').show();
-                $(this).find('.main-page_choice__type-container').show();
-                $(this).find('.main-page_choice__options-hover-container').hide();
-            }
+            $(this).find('.main-page_choice__name-container').show();
+            $(this).find('.main-page_choice__cost').show();
+            $(this).find('.main-page_choice__type-container').show();
+            $(this).find('.main-page_choice__options-hover-container').hide();
         });
 }
 
@@ -383,6 +388,8 @@ $('.catalog-items__choice-link-container button').on("click", function () {
     console.log('123123')
     $('#pp-btn').click();
 })
+
+//Выезжающая политика конфиденциальности
 
 $('.popup-callback__label-meta a').on("click", function () {
     $(this).parents('.popup-change-size').addClass('flex-scroll');
