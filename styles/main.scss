@@ -23,6 +23,10 @@
   text-align: center;
   min-width: 340px;
 
+  .popup-politics {
+    text-align: left;
+  }
+
   &__main-label {
     font-size: 37.5px;
     font-weight: bold;
@@ -100,6 +104,19 @@
   p {
     font-size: 12px;
   }
+
+  &__btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+      width: 75px;
+      height: 43px;
+      margin: 20px 0 30px 0;
+    }
+  }
+
 }
 
 .wrapper {
@@ -120,6 +137,7 @@
   }
 
   &__burger {
+    z-index: 300;
     right: 10px;
     position: absolute;
     /*top: 28px;*/
@@ -180,15 +198,16 @@
     text-align: right;
     display: none;
     position: absolute;
-    width: 160px;
-    top: 50px;
-    right: 10px;
+    width: 100%;
+    top: 15px;
+    right: 0;
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid var(--color-gamma);;
 
     .header__list {
       text-align: center;
+      margin-top: 30px;
 
       li {
         line-height: 25px;
@@ -393,7 +412,11 @@
       font-weight: 700;
       line-height: 1.33;
       color: var(--color-gamma);
-      margin-right: 15px;
+
+      svg {
+        margin-left: 15px;
+      }
+
     }
   }
 
@@ -4114,6 +4137,8 @@
         text-align: center;
         font-size: 16px;
         line-height: 1.1;
+        color: var(--color-beta);
+        font-weight: 700;
       }
 
       .header-section__container {

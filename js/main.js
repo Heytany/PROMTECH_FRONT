@@ -100,6 +100,13 @@ $(".modal-inline_no-arrows").fancybox({
             ''
     },
     showNavArrows: false,
+    'afterClose': function () {
+        console.log("asdasdasd")
+        $('.change-size-no_scroll .popup-form-input').show();
+        $('.change-size-no_scroll .popup-politics').hide();
+        $('.change-size-no_scroll').removeClass('flex-scroll');
+    }
+
 });
 
 //Спасибо на главной странице ПРОСТО ДЛЯ АНИМАЦИИ
@@ -376,3 +383,16 @@ $('.catalog-items__choice-link-container button').on("click", function () {
     console.log('123123')
     $('#pp-btn').click();
 })
+
+$('.popup-callback__label-meta a').on("click", function () {
+    $(this).parents('.popup-change-size').addClass('flex-scroll');
+    $(this).parents('.popup-form-input').hide();
+    $(this).parents('.popup-form-input').next().show();
+})
+
+$('.popup-politics__btn-container button').on("click", function () {
+    $(this).parents('.popup-change-size').removeClass('flex-scroll');
+    $(this).parents('.popup-politics').hide();
+    $(this).parents('.popup-callback').find('.popup-form-input').show();
+})
+
