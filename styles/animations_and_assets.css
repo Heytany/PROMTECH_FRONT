@@ -7,6 +7,25 @@ body {
   webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.popup-callback_false-exit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.popup-callback_false-exit button {
+  top: -44px;
+  right: 0;
+  position: absolute;
+  background: none;
+  height: 44px;
+  width: 44px;
+  padding: 10px;
+}
+.popup-callback_false-exit button svg path {
+  fill: var(--color-gamma);
+}
+
 /*
 Анимации и стили кнопок и ссылок
 */

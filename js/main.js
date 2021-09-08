@@ -101,8 +101,9 @@ $(".modal-inline_no-arrows").fancybox({
     },
     showNavArrows: false,
     'afterClose': function () {
-        console.log("asdasdasd")
         $('.change-size-no_scroll .popup-form-input').show();
+        $('.change-size-no_scroll .popup-callback_false-exit').hide();
+        $('.change-size-no_scroll .fancybox-button.fancybox-close-small').show();
         $('.change-size-no_scroll .popup-politics').hide();
         $('.change-size-no_scroll').removeClass('flex-scroll');
     }
@@ -292,21 +293,21 @@ if (elementExists2) {
     let offsetItemBuy;
     let miniOffset;
     if (elementExists) {
-        miniOffset = 470;
+        miniOffset = 460;
         offsetItemBuy = offset($('.homeuse.homeuse-separator')[0]);
         console.log(offsetItemBuy.top)
     } else {
-        miniOffset = 440;
+        miniOffset = 500;
         offsetItemBuy = offset($('.main-page_deal-callback__container')[0]);
     }
 
     $('.main-page_choice__item')
         .on('mouseenter', function () {
-            if ((posTop + miniOffset) < offsetItemBuy.top) {
+            if ((posTop + miniOffset) < offsetItemBuy.top && ($(window).width() > 777)) {
                 $(this).find('.main-page_choice__name-container').hide();
                 $(this).find('.main-page_choice__cost').hide();
                 $(this).find('.main-page_choice__type-container').hide();
-                $(this).find('.main-page_choice__options-hover-container').slideToggle("fast");
+                $(this).find('.main-page_choice__options-hover-container').show();
             }
 
         })
@@ -316,6 +317,7 @@ if (elementExists2) {
             $(this).find('.main-page_choice__type-container').show();
             $(this).find('.main-page_choice__options-hover-container').hide();
         });
+
 }
 
 
@@ -385,7 +387,6 @@ if (IsVerska()) {
 //Открытие одного и того же попапа по клику на оставить заявку Каталог
 
 $('.catalog-items__choice-link-container button').on("click", function () {
-    console.log('123123')
     $('#pp-btn').click();
 })
 
@@ -395,11 +396,16 @@ $('.popup-callback__label-meta a').on("click", function () {
     $(this).parents('.popup-change-size').addClass('flex-scroll');
     $(this).parents('.popup-form-input').hide();
     $(this).parents('.popup-form-input').next().show();
+    $(this).parents('.change-size-no_scroll').find('.popup-callback_false-exit').show();
+    $(this).parents('.change-size-no_scroll').find('.fancybox-button.fancybox-close-small').hide();
+
 })
 
-$('.popup-politics__btn-container button').on("click", function () {
+$('.popup-callback_false-exit button').on("click", function () {
     $(this).parents('.popup-change-size').removeClass('flex-scroll');
-    $(this).parents('.popup-politics').hide();
-    $(this).parents('.popup-callback').find('.popup-form-input').show();
+    $(this).parents('.popup-change-size').find('.popup-politics').hide();
+    $(this).parents('.popup-change-size').find('.popup-form-input').show();
+    $(this).parents('.change-size-no_scroll').find('.popup-callback_false-exit').hide();
+    $(this).parents('.change-size-no_scroll').find('.fancybox-button.fancybox-close-small').show();
 })
 

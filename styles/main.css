@@ -89,16 +89,7 @@
 .popup-politics p {
   font-size: 12px;
 }
-.popup-politics__btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.popup-politics__btn-container button {
-  width: 75px;
-  height: 43px;
-  margin: 20px 0 30px 0;
-}
+
 
 .wrapper {
   max-width: 1238px;
@@ -430,6 +421,15 @@
   line-height: 1.5;
   color: var(--color-alpha);
 }
+.main .main-page_capabilities-and-choice .main-page_choice__link-block {
+  display: block;
+  z-index: 90;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 .main .main-page_capabilities-and-choice .main-page_choice__main-label {
   margin: 65px 0 0 0;
   font-size: 60px;
@@ -447,6 +447,7 @@
   align-items: center;
 }
 .main .main-page_capabilities-and-choice .main-page_choice__item {
+  position: relative;
   flex: 30% 0 1;
   box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
   background-color: var(--color-beta);
@@ -471,7 +472,7 @@
   flex: 1 0 auto;
 }
 .main .main-page_capabilities-and-choice .main-page_choice__detail-container {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .main .main-page_capabilities-and-choice .main-page_choice__detail-container:last-of-type {
@@ -536,6 +537,8 @@
   background-color: #d3d3d3;
 }
 .main .main-page_capabilities-and-choice .main-page_choice__link {
+  position: relative;
+  z-index: 100;
   display: block;
   width: 253px;
   height: 43px;
@@ -3060,6 +3063,7 @@
     font-size: 37px;
   }
   .main .main-page_choice .main-page_choice__item {
+    position: relative;
     width: 100%;
     flex: 35% 0 1;
     margin-bottom: 35px;

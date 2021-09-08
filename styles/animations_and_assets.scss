@@ -1,8 +1,31 @@
 
-body { overflow: auto !important; }
+body {
+  overflow: auto !important;
+}
 
 * {
   webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.popup-callback_false-exit {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+
+  button {
+    top: -44px;
+    right: 0;
+    position: absolute;
+    background: none;
+    height: 44px;
+    width: 44px;
+    padding: 10px;
+
+    svg path {
+      fill: var(--color-gamma);
+    }
+  }
 }
 
 /*
